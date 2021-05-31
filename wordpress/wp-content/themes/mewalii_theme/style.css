@@ -1,8 +1,8 @@
 /*
-Theme Name: Mewalii_theme
-Template: Neve
-Version: 1.0.0
-Description: Rigtig godt tema
+Theme Name: mewalii-theme
+Template: neve
+Version: 1.0.4
+Description: Mewalii child theme
 Author: Emma Svane
 */
 
@@ -30,5 +30,33 @@ Author: Emma Svane
 
 /*MENSTRUATIONS SNAK CSS*/
 
+#snak_main {
+    margin: 0 10px 0 10px;
+}
+#snak_h1 {
+    text-align: center;
+}
+#snak_img {
+    width: 70%;
+    margin: 0 auto;
+}
+#pin_img {
+    width: 15px;
+    height: 29px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#sporgsmaal_container {
+    display: grid;
+    grid-template-columns: 10% 90%;
+    grid-gap: 10px;
+}
+@media only screen and (min-width: 700px) {
+    #snak_intro {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
 
 /*SINGLE SIDE CSS*/
