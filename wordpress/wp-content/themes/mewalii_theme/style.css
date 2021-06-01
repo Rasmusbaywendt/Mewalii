@@ -30,16 +30,31 @@ Author: Emma Svane
 
 /*MENSTRUATIONS SNAK CSS*/
 
+
+/*----INTRO TIL MENSTRUATIONS SNAK SIDE-----*/
+
 #snak_main {
-    margin: 0 10px 0 10px;
+    /*    padding: 0 20px 0 20px;*/
+    background-color: white;
+}
+#snak_intro {
+    background-color: #FCF2E8;
+    padding: 0 20px 0 20px;
 }
 #snak_h1 {
-    text-align: center;
+    font-size: 35px;
+    text-transform: inherit;
+    margin: 10px auto 0 auto;
 }
 #snak_img {
     width: 70%;
-    margin: 0 auto;
+    margin: 0 auto 30px auto;
+    display: block;
+    padding-bottom: 30px;
 }
+
+/*-----UGENS SPØRGSMÅL SEKTION-----*/
+
 #pin_img {
     width: 15px;
     height: 29px;
@@ -47,15 +62,211 @@ Author: Emma Svane
     margin-left: auto;
     margin-right: auto;
 }
+.snak_h2 {
+    font-size: 25px;
+    font-weight: 600;
+}
 #sporgsmaal_container {
     display: grid;
-    grid-template-columns: 10% 90%;
-    grid-gap: 10px;
+    grid-template-columns: 5% 95%;
+    grid-gap: 5px;
+    margin-left: 10px;
 }
-@media only screen and (min-width: 700px) {
+#ugens_liste {
+    background-color: #FCF2E8;
+    border-top: 5px solid #EB7A6B;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+#question_container {
+    background-color: #F9DFD6;
+    border: 1px solid #BC9C9A;
+    border-radius: 15px;
+    width: 80%;
+    padding: 5px;
+    margin: 15px auto 10px 10px;
+}
+#question_container h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+#svar_container {
+    background-color: #FDF3F0;
+    border: 1px solid #BC9C9A;
+    border-radius: 15px;
+    width: 80%;
+    padding: 5px;
+    margin: 10px 10px 10px auto;
+}
+#uge_svar {
+    margin-bottom: 5px;
+}
+
+/*---FILTRERING-----*/
+
+#sporgsmaal .snak_h2 {
+    margin-left: 10px;
+}
+#filtrering {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    overflow-x: scroll;
+}
+#filtrering button:hover {
+    background-color: #2D502C;
+}
+
+/*fjerner knap med kategori id 30*/
+
+[data-kategori="30"] {
+    display: none;
+}
+.filter {
+    background-color: rgb(255, 0, 0, 0%);
+    border: 2px solid #2D502C;
+    border-radius: 25px;
+    width: 120px;
+    margin-left: 10px;
+    text-align: center;
+    padding: 5px;
+    color: black;
+}
+.valgt {
+    color: white;
+    background-color: #2D502C;
+}
+
+/*-----SPØRGSMÅL SEKTION------*/
+
+.question_container {
+    background-color: #F9DFD6;
+    border: 1px solid #BC9C9A;
+    border-radius: 15px;
+    width: 80%;
+    padding: 5px;
+    margin: 15px auto 10px 10px;
+}
+.question_container h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.svar_container {
+    background-color: #FDF3F0;
+    border: 1px solid #BC9C9A;
+    border-radius: 15px;
+    width: 80%;
+    padding: 5px;
+    margin: 10px 10px 10px auto;
+}
+.svar_container p {
+    margin-bottom: 5px;
+}
+.question_wrapper {
+    background-color: #FCF2E8;
+    border-top: 5px solid #EB7A6B;
+    padding-bottom: 15px;
+    margin-top: 15px;
+}
+#mere {
+    background-color: #F9DFD6;
+    border: 1px solid #EB7A6B;
+    border-radius: 25px;
+    color: #262626;
+    width: 120px;
+    display: block;
+    margin: 15px auto 0;
+}
+
+/*----FORMULAR SEKTION------*/
+
+#formular .snak_h2 {
+    text-align: center;
+    margin-top: 30px;
+}
+#formular_tekst {
+    margin: 10px auto;
+    text-align: center;
+    max-width: 400px;
+}
+#form {
+    background-color: #DBD0C7;
+    padding-bottom: 20px;
+}
+#form_wrapper {
+    margin-top: 10px;
+    display: block;
+    width: 80vw;
+    margin: auto;
+}
+.form_container {
+    display: table-caption;
+}
+.input {
+    background-color: white !important;
+    border: 1px solid white !important;
+    border-radius: 0px !important;
+    width: 80vw;
+}
+.label {
+    font-weight: 600;
+    margin: 10px auto 5px auto;
+}
+#send_knap {
+    border-radius: 25px;
+    background-color: white;
+    color: #292929;
+    width: 150px;
+    padding: 12px;
+    display: block;
+    margin: 0 auto 0 auto;
+}
+
+/*--------DESKTOP VERSION----------*/
+
+@media only screen and (min-width: 600px) {
     #snak_intro {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 60% 40%;
+        padding: 20px 15px 0 15px;
+        margin-bottom: 20px;
+    }
+    #question_container {
+        width: 60%;
+        margin: 15px auto 10px 10%;
+    }
+    #svar_container {
+        width: 60%;
+        margin: 10px 10% 10px auto;
+    }
+    #filtrering {
+        display: inherit;
+        grid-template-columns: repeat(4, 1fr);
+        overflow-x: auto;
+    }
+    #form_img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    #form_wrapper {
+        width: auto;
+    }
+    .question_container {
+        width: 60%;
+        margin: 15px auto 10px 10%;
+    }
+    .svar_container {
+        width: 60%;
+        margin: 10px 10% 10px auto;
+    }
+    #formular_container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    .input {
+        width: 45vw !important;
     }
 }
 

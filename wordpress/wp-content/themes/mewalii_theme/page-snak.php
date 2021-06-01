@@ -13,6 +13,7 @@ get_header();?>
 
     <main id="snak_main">
 
+
         <!------FØRSTE SEKTION------>
         <section id="snak_intro">
             <div>
@@ -31,55 +32,69 @@ get_header();?>
                     <img id="pin_img" src="<?php echo get_stylesheet_directory_uri()?>/img/pin.png" alt="pin">
                 </div>
                 <div>
-                    <h2>Ugens spørgsmål</h2>
+                    <h2 class="snak_h2">Ugens spørgsmål</h2>
                 </div>
             </div>
-            <div id="hent_data"></div>
+            <div id="ugens_liste">
+                <div id="question_container">
+                    <h3 id="uge_question"></h3>
+                </div>
+                <div id="svar_container">
+                    <p id="uge_svar"></p>
+                </div>
+            </div>
         </section>
 
         <!------TREDJE SEKTION------>
         <section id="sporgsmaal">
-            <nav id="filtrering">
-                <h2>Kategorier</h2>
-                <!--
-                <button data-kategori="blodning" class="valgt">Blødning</button>
-<button data-kategori="smerter">Smerter</button>
-<button data-kategori="hverdagen">Hverdagen</button>
-<button data-kategori="pms">PMS</button>
--->
-            </nav>
+            <h2 class="snak_h2">Kategorier</h2>
+            <nav id="filtrering"></nav>
             <div id="liste"></div>
             <button id="mere">Læs flere</button>
         </section>
 
         <!------FJERDE SEKTION------>
         <section id="formular">
-            <h2>Har du et spørgsmål</h2>
-            <p>Vi vil meget gerne høre fra dig, hvis du har et spørgsmål eller noget du er nyssgerig på</p>
-            <div>
+            <h2 class="snak_h2">Har du et spørgsmål</h2>
+            <p id="formular_tekst">Vi vil meget gerne høre fra dig, hvis du har et spørgsmål eller noget du er nyssgerig på</p>
+            <div id="formular_container">
                 <div>
-                    <form action="netlify">
-                        <label for="fname">Fornavn:</label>
-                        <input type="text">
-                        <label for="number">Telefonnummer:</label>
-                        <input type="text">
-                        <input type="radio" id="kontakt" value="ja">
-                        <label for="kontakt">Jeg ønsker at modtage besked når der er svar</label>
-                        <label for="question">Spørgsmål:</label>
-                        <textarea name="message" id="besked" cols="30" rows="10"></textarea>
-                        <input type="submit" value="Send">
+                    <form id="form" action="netlify">
+                        <div id="form_wrapper">
+                            <div class="form_container">
+                                <label class="label" for="fname">Fornavn:</label>
+                                <input class="input" type="text" placeholder="Hvad er dit navn?">
+                            </div>
+                            <div class="form_container">
+                                <label class="label" for="number">Telefonnummer:</label>
+                                <input class="input" type="text" placeholder="Hvad er dit nummer?">
+                            </div>
+                            <div class="">
+                                <input class="" type="radio" id="kontakt" value="ja">
+                                <label class="label" for="kontakt">Jeg ønsker at modtage besked når der er svar</label>
+                            </div>
+                            <div class="form_container">
+                                <label class="label" for="question">Spørgsmål:</label>
+                                <textarea class="input" name="message" id="besked" cols="30" rows="10" placeholder="Hvad har du i tankerne?"></textarea>
+                            </div>
+                        </div>
+                        <input type="submit" value="Send" id="send_knap">
                     </form>
                 </div>
                 <div>
-                    <img src="<?php echo get_stylesheet_directory_uri()?>/img/rapsmark.jpg" alt="rapsmark">
+                    <img id="form_img" src="<?php echo get_stylesheet_directory_uri()?>/img/rapsmark.jpg" alt="rapsmark">
                 </div>
             </div>
         </section>
 
-        <template id="liste">
-            <div>
-                <h3 id="question"></h3>
-                <p id="svar"></p>
+        <template>
+            <div class="question_wrapper">
+                <div class="question_container">
+                    <h3 id="question"></h3>
+                </div>
+                <div class="svar_container">
+                    <p id="svar"></p>
+                </div>
             </div>
         </template>
 
@@ -155,6 +170,14 @@ get_header();?>
                 filter = this.dataset.kategori;
                 console.log(filter);
 
+                //tilføjer valgt class til den klikke knap
+                this.classList.add("valgt");
+
+                //fjerner valgt fra alle andre knapper som ikke er trykket
+                document.querySelectorAll("#filtrering button").forEach(elm =>
+                    elm.classList.remove("valgt"));
+
+
                 //kalder visQuestions()
                 visQuestions();
 
@@ -186,9 +209,13 @@ get_header();?>
                         const klon = skabelon.cloneNode(true).content;
                         //indsætter spørgsmål json ind i #question
                         klon.querySelector("#question").textContent = question.question;
-                        klon.querySelector("#svar").textContent = question.svar;
+                        klon.querySelector("#svar").textContent = question.svar + ` Hanne, sygeplejerske`;
                         //tillægger klonen til listen
                         liste.appendChild(klon);
+                    }
+                    if (question.categories.includes(30)) {
+                        document.querySelector("#uge_question").textContent = question.question;
+                        document.querySelector("#uge_svar").textContent = question.svar;
                     }
                 })
 
