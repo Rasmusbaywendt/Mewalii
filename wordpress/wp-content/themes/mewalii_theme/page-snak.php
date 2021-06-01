@@ -154,7 +154,7 @@ get_header();?>
                     document.querySelector("#filtrering").innerHTML += `<button class="filter" data-kategori="${cat.id}">${cat.name}</button>`;
                 })
 
-                //hvis data-kategori har id 26 skal den tilføje .valgt
+                //tilføjer .valgt til knap med id 26
                 if (`data-kategori=26`) {
                     document.querySelector(".filter").classList.add("valgt");
                 }
@@ -217,7 +217,7 @@ get_header();?>
                         //indsætter spørgsmål json ind i #question
                         klon.querySelector("#question").textContent = question.question;
                         //indsætter ssvar json ind i #uge_svar
-                        klon.querySelector("#svar").textContent = question.svar + `<br> <p>Hanne, sygeplejerske</p>`;
+                        klon.querySelector("#svar").innerHTML = question.svar + `<br> -Hanne, sygeplejerske`;
                         //tillægger klonen til listen
                         liste.appendChild(klon);
                     }
@@ -226,7 +226,7 @@ get_header();?>
                         //indsætter spørgsmål json ind i #question
                         document.querySelector("#uge_question").textContent = question.question;
                         //indsætter ssvar json ind i #uge_svar
-                        document.querySelector("#uge_svar").textContent = question.svar;
+                        document.querySelector("#uge_svar").innerHTML = question.svar + `<br> -Hanne, sygeplejerske`;
                     }
                 })
 
