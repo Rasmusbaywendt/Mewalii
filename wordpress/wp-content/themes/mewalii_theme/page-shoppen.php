@@ -11,58 +11,92 @@ get_header();
 
 ?>
 
-    HEJJJ
+<main class="main_shop">
+	<h1>Shop</h1>
+	<section class="shop_top">
+		<h2>Sådan fungerer det</h2>
+		<div class="vejledning">
+			<div class="udvaelgelse">
+				<img src="<?php echo get_stylesheet_directory_uri()?>/1_saadan_gor_du.svg" alt="illustration af bind og tamponer">
+				<p>Udvælg dine favoritter</p>
+			</div>
+			<div class="bestil_og_faa">
+				<img src="<?php echo get_stylesheet_directory_uri()?>/2_saadan_gor_du.svg" alt="illustration af en pakke">
+				<p>Bestil og få produkterne sendte direkte hjem til dig</p>
+			</div>
+			<div class="tak_dig_selv">
+				<img src="<?php echo get_stylesheet_directory_uri()?>/3_saadan_gor_du.svg" alt="illustration af en hånd og en plante">
+				<p>Tak dig selv for at bidrage til en mere bæredygtig hverdag</p>
+			</div>
+		</div>
+	</section>
+	<section class="shop_filtreing_knapper">
 
-    <div class="<?php echo esc_attr( $container_class ); ?> single-page-container">
-        <div class="row">
-            <?php do_action( 'neve_do_sidebar', 'single-page', 'left' ); ?>
-                <div class="nv-single-page-wrap col">
-                    <?php
-			/**
-			 * Executes actions before the page header.
-			 *
-			 * @since 2.4.0
-			 */
-			do_action( 'neve_before_page_header' );
+	</section>
 
-			/**
-			 * Executes the rendering function for the page header.
-			 *
-			 * @param string $context The displaying location context.
-			 *
-			 * @since 1.0.7
-			 */
-			do_action( 'neve_page_header', 'single-page' );
+	<section class="shop_indhold">
+	</section>
 
-			/**
-			 * Executes actions before the page content.
-			 *
-			 * @param string $context The displaying location context.
-			 *
-			 * @since 1.0.7
-			 */
-			do_action( 'neve_before_content', 'single-page' );
+	<template>
+		<img src="" alt="">
+		<p class="navn"></p>
+		<p class="pris"></p>
+	</template>
 
-			if ( have_posts() ) {
-				while ( have_posts() ) {
-					the_post();
-					get_template_part( 'template-parts/content', 'page' );
-				}
-			} else {
-				get_template_part( 'template-parts/content', 'none' );
-			}
 
-			/**
-			 * Executes actions after the page content.
-			 *
-			 * @param string $context The displaying location context.
-			 *
-			 * @since 1.0.7
-			 */
-			do_action( 'neve_after_content', 'single-page' );
-			?>
-                </div>
-                <?php do_action( 'neve_do_sidebar', 'single-page', 'right' ); ?>
-        </div>
-    </div>
-    <?php get_footer(); ?>
+</main>
+
+<?php get_footer(); ?>
+
+<script>
+	//Lav variable
+	let produkter = [];
+	//	let categories;
+	//lyt om siden loader
+	document.addEventListener("DOMContentLoaded", start);
+
+
+	function start() {
+		console.log("start");
+		getJson();
+	}
+
+	//find data fra produkterne via json her vises max 100
+	const url = "http://emmasvane.dk/mewalii/mewalli/wp-json/wp/v2/produkt?per_page=100";
+
+	//henter data igennem ovenstående
+	async function getJson() {
+		let response = await fetch(url);
+
+		produkter = await response.json();
+
+		visProdukter();
+
+	}
+
+	function visProdukter() {
+		console.log(produkter);
+
+		//definere templatet som en variable
+		let temp = document.querySelector("template");
+
+		//opretter et konstant som en container, hvor templatet kan klones til.
+		const container = document.querySelector(".shop_indhold");
+		produkter.forEach(produkt => {
+			console.log(produkt);
+			let klon = temp.cloneNode(true).content;
+			klon.querySelector("img").src = produkt.billede_1.guid
+			klon.querySelector(".navn").textContent = produkt.produktnavn;
+			klon.querySelector(".pris").textContent = produkt.pris;
+
+
+			//
+			//			klon.querySelector("article").addEventListener("click", () => {
+			//	 location.href = produkt.link;
+			//			})
+
+			container.appendChild(klon);
+		})
+	}
+
+</script>
