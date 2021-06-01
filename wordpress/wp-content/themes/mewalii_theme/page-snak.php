@@ -16,7 +16,7 @@ get_header();?>
 
         <!------FØRSTE SEKTION------>
         <section id="snak_intro">
-            <div>
+            <div id="snak_intro_tekst">
                 <h1 id="snak_h1">Menstruationssnak</h1>
                 <p>Hos Mewalii vil vi gerne være der når du har brug for det. Dette gælder både før, under og efter din menstruation. Derfor har vi skabt et univers hvor du kan læse hvad andre har af spørgsmål, samt få svar på dem du selv skulle have vedrørende menstruation. Vi glæder os til at besvare dine spørgsmål!</p>
             </div>
@@ -129,8 +129,10 @@ get_header();?>
 
             //henter wp REST API ind
             async function getJson() {
+                //opretter konstant som fetcher json
                 const data = await fetch(dbUrl);
                 const catdata = await fetch(dbCat);
+                //sætter de oprettede variabler til at indeholde json
                 questions = await data.json();
                 kategorier = await catdata.json();
 
@@ -152,6 +154,11 @@ get_header();?>
                     document.querySelector("#filtrering").innerHTML += `<button class="filter" data-kategori="${cat.id}">${cat.name}</button>`;
                 })
 
+                //hvis data-kategori har id 26 skal den tilføje .valgt
+                if (`data-kategori=26`) {
+                    document.querySelector(".filter").classList.add("valgt");
+                }
+
                 //kald addEventListenersToButtons()
                 addEventListenersToButtons();
             }
@@ -170,12 +177,12 @@ get_header();?>
                 filter = this.dataset.kategori;
                 console.log(filter);
 
-                //tilføjer valgt class til den klikke knap
-                this.classList.add("valgt");
-
                 //fjerner valgt fra alle andre knapper som ikke er trykket
                 document.querySelectorAll("#filtrering button").forEach(elm =>
                     elm.classList.remove("valgt"));
+
+                //tilføjer valgt class til den klikke knap
+                this.classList.add("valgt");
 
 
                 //kalder visQuestions()
@@ -209,12 +216,16 @@ get_header();?>
                         const klon = skabelon.cloneNode(true).content;
                         //indsætter spørgsmål json ind i #question
                         klon.querySelector("#question").textContent = question.question;
-                        klon.querySelector("#svar").textContent = question.svar + ` Hanne, sygeplejerske`;
+                        //indsætter ssvar json ind i #uge_svar
+                        klon.querySelector("#svar").textContent = question.svar + `<br> <p>Hanne, sygeplejerske</p>`;
                         //tillægger klonen til listen
                         liste.appendChild(klon);
                     }
+                    //hvis spørgsmålet har kategorien med id 30 skal en vises
                     if (question.categories.includes(30)) {
+                        //indsætter spørgsmål json ind i #question
                         document.querySelector("#uge_question").textContent = question.question;
+                        //indsætter ssvar json ind i #uge_svar
                         document.querySelector("#uge_svar").textContent = question.svar;
                     }
                 })
