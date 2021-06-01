@@ -17,7 +17,7 @@ get_header();?>
         <!------FØRSTE SEKTION------>
         <section id="snak_intro">
             <div>
-                <h1 id="snak_h1">Menstruations snak</h1>
+                <h1 id="snak_h1">Menstruationssnak</h1>
                 <p>Hos Mewalii vil vi gerne være der når du har brug for det. Dette gælder både før, under og efter din menstruation. Derfor har vi skabt et univers hvor du kan læse hvad andre har af spørgsmål, samt få svar på dem du selv skulle have vedrørende menstruation. Vi glæder os til at besvare dine spørgsmål!</p>
             </div>
             <div>

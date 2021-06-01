@@ -188,7 +188,7 @@ Author: Emma Svane
 #formular_tekst {
     margin: 10px auto;
     text-align: center;
-    max-width: 400px;
+    max-width: 500px;
 }
 #form {
     background-color: #DBD0C7;
@@ -223,7 +223,7 @@ Author: Emma Svane
     margin: 0 auto 0 auto;
 }
 
-/*--------DESKTOP VERSION----------*/
+/*----------TABLET VERSION----------*/
 
 @media only screen and (min-width: 600px) {
     #snak_intro {
@@ -245,13 +245,18 @@ Author: Emma Svane
         grid-template-columns: repeat(4, 1fr);
         overflow-x: auto;
     }
+}
+
+/*---------DESKTOP VERSION----------*/
+
+@media only screen and (min-width: 800px) {
     #form_img {
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
     #form_wrapper {
-        width: auto;
+        max-width: 400px;
     }
     .question_container {
         width: 60%;
@@ -266,7 +271,11 @@ Author: Emma Svane
         grid-template-columns: 50% 50%;
     }
     .input {
-        width: 45vw !important;
+        width: 380px !important;
+    }
+    .label {
+        font-size: 0.8em;
+        margin: 10px auto 0 auto;
     }
 }
 
