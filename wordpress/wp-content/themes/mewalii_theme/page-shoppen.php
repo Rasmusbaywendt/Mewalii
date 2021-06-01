@@ -12,7 +12,7 @@ get_header();
 ?>
 
 <main class="main_shop">
-	<h1>Shop</h1>
+	<h1 class="shop_title">Prokukterne er snart på markedet</h1>
 	<section class="shop_top">
 		<h2>Sådan fungerer det</h2>
 		<div class="vejledning">
@@ -38,9 +38,14 @@ get_header();
 	</section>
 
 	<template>
-		<img src="" alt="">
-		<p class="navn"></p>
-		<p class="pris"></p>
+
+		<div>
+			<img src="" alt="">
+			<div>
+				<p class="navn"></p>
+				<p class="pris"></p>
+			</div>
+		</div>
 	</template>
 
 
@@ -72,6 +77,9 @@ get_header();
 
 		visProdukter();
 
+		//kald opretKnapper()
+		opretKnapper();
+
 	}
 
 	function visProdukter() {
@@ -87,11 +95,11 @@ get_header();
 			let klon = temp.cloneNode(true).content;
 			klon.querySelector("img").src = produkt.billede_1.guid
 			klon.querySelector(".navn").textContent = produkt.produktnavn;
-			klon.querySelector(".pris").textContent = produkt.pris;
+			klon.querySelector(".pris").textContent = produkt.pris + " kr";
 
 
 			//
-			//			klon.querySelector("article").addEventListener("click", () => {
+			//			klon.querySelector("container").addEventListener("click", () => {
 			//	 location.href = produkt.link;
 			//			})
 
@@ -99,4 +107,31 @@ get_header();
 		})
 	}
 
+
+
+
+	//opretter knapper
+// function opretKnapper() {
+//
+// //opretter en knap for hver kategori, og tilføjer kategori navnet på knappen
+// kategorier.forEach(cat => {
+// document.querySelector("#filtrering").innerHTML += `<button class="filter" data-kategori="${cat.id}">${cat.name}</button>`;
+// })
+//
+// //hvis data-kategori har id 26 skal den tilføje .valgt
+// if (`data-kategori=26`) {
+// document.querySelector(".filter").classList.add("valgt");
+// }
+//
+// //kald addEventListenersToButtons()
+// addEventListenersToButtons();
+// }
+//
+//
+// function addEventListenersToButtons() {
+// //lytter til alle knapper om der bliver klikket
+// document.querySelectorAll("#filtrering button").forEach(elm => {
+// elm.addEventListener("click", filtrering);
+// })
+// }
 </script>
