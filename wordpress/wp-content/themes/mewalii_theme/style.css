@@ -20,17 +20,27 @@ Author: Emma Svane
 
 
 /*FORSIDE CSS*/
+.swiper-slide-inner {
+	padding: 10px;
+}
 
 
 /*SHOP CSS*/
 
 .shop_title {
 	margin-left: 7wv;
+	color: #FFF;
+	text-transform: none;
 }
 
 .shop_top {
 	background-color: #FCF2E8;
-	margin: 7vw;
+}
+
+.shop_top h1 {
+	margin-left: 7vw;
+	margin-bottom: 2.5vw;
+	margin-top: 2.5vw;
 }
 
 .vejledning {
@@ -41,12 +51,18 @@ Author: Emma Svane
 	grid-gap: 65px;
 }
 
+
 .shop_indhold {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-template-columns: 1fr 1fr;
 	grid-gap: 30px;
 	background-color: white;
 	padding: 7vw;
+	padding-top: 3vw;
+}
+
+.shop_indhold img {
+	cursor: pointer;
 }
 
 .temp_bund {
@@ -65,12 +81,24 @@ Author: Emma Svane
 	padding: 2vw;
 }
 
+.box_soon {
+	position: absolute;
+	background-color: #FFF;
+	padding: 4px;
+	opacity: 0.6;
+}
+
+.soon {
+	margin-bottom: 0;
+}
+
 #filtrering_knap button {
 	margin-right: 15px;
+	cursor: pointer;
 }
 
 #filtrering_knap button:hover {
-	background-color: #2D502C;
+	background-color: #374031;
 }
 
 
@@ -178,7 +206,7 @@ Author: Emma Svane
 }
 
 #filtrering button:hover {
-	background-color: #2D502C;
+	background-color: #374031;
 }
 
 /*fjerner knap med kategori id 30*/
@@ -189,7 +217,7 @@ Author: Emma Svane
 
 .filter {
 	background-color: rgb(255, 0, 0, 0%);
-	border: 2px solid #2D502C;
+	border: 2px solid #374031;
 	border-radius: 25px;
 	width: 120px;
 	margin-left: 10px;
@@ -200,7 +228,7 @@ Author: Emma Svane
 
 .valgt {
 	color: white;
-	background-color: #2D502C;
+	background-color: #374031;
 }
 
 /*-----SPØRGSMÅL SEKTION------*/
@@ -326,6 +354,10 @@ Author: Emma Svane
 		grid-template-columns: repeat(4, 1fr);
 		overflow-x: auto;
 	}
+
+	.shop_indhold {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
 }
 
 /*---------DESKTOP VERSION----------*/
@@ -414,7 +446,13 @@ Author: Emma Svane
 		padding: 0px;
 		font-size: 12px;
 	}
+
+	.shop_indhold {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
 }
+
+
 
 /*SINGLE SIDE CSS*/
 

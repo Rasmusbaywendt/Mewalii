@@ -12,9 +12,9 @@ get_header();
 ?>
 
 <main class="main_shop">
-	<h1 class="shop_title">Prokukterne er snart på markedet</h1>
+
 	<section class="shop_top">
-		<h2>Sådan fungerer det</h2>
+		<h1>Sådan fungerer det</h1>
 		<div class="vejledning">
 			<div class="udvaelgelse">
 				<img src="<?php echo get_stylesheet_directory_uri()?>/1_saadan_gor_du.svg" alt="illustration af bind og tamponer">
@@ -30,18 +30,24 @@ get_header();
 			</div>
 		</div>
 	</section>
+
 	<section class="shop_filtrering">
 		<nav id="filtrering_knap"></nav>
 	</section>
 
-	<section class="shop_indhold">
-		<h2 class="shop_alle">Alle produkter</h2>
+
+	<section class="shop_indhold" id="liste">
+
 	</section>
 
 	<template>
-
 		<div>
-			<img src="" alt="">
+			<div class="image_box">
+				<div class="box_soon">
+					<p class="soon">Kommer snart</p>
+				</div>
+				<img src="" alt="">
+			</div>
 			<div class="temp_bund">
 				<b class="navn"></b>
 				<p class="pris"></p>
@@ -60,7 +66,7 @@ get_header();
 	//Variable, der indeholder json kategorien
 	let categories;
 	//Variable til filter
-	let filter;
+	let filter = "alle";
 
 	//lyt om siden loader
 	document.addEventListener("DOMContentLoaded", start);
@@ -87,6 +93,8 @@ get_header();
 		categories = await catdata.json();
 		produkter = await response.json();
 
+		console.log("categories ", categories);
+
 		//kald visProdukter()
 		visProdukter();
 
@@ -95,48 +103,20 @@ get_header();
 
 	}
 
-	function visProdukter() {
-		console.log(produkter);
-
-		//definere templatet som en variable
-		let temp = document.querySelector("template");
-
-		//opretter et konstant som en container, hvor templatet kan klones til.
-		const container = document.querySelector(".shop_indhold");
-		//looper arrayet igennem enkeltvis for hver af nedenstående kloning.
-		produkter.forEach(produkt => {
-			console.log(produkt);
-			let klon = temp.cloneNode(true).content;
-			klon.querySelector("img").src = produkt.billede_1.guid
-			klon.querySelector(".navn").textContent = produkt.produktnavn;
-			klon.querySelector(".pris").textContent = produkt.pris + " kr";
-
-
-
-			klon.querySelector("img").addEventListener("click", () => {
-				location.href = produkt.link;
-			})
-
-			container.appendChild(klon);
-		})
-	}
-
-
-
 
 	//opretter knapper
 	function opretKnapper() {
 
 		//opretter en knap for hver kategori, og tilføjer kategori navnet på knappen
 		categories.forEach(cat => {
-			document.querySelector("#filtrering_knap").innerHTML += `<button class="filter" data-kategori="${cat.id}">${cat.name}</button>`;
+			document.querySelector("#filtrering_knap").innerHTML += `<button class="filter" data-categories="${cat.id}">${cat.name}</button>`;
 		})
 
 		addEventListernesToButtons();
 
 	}
 
-	function addEventListenersToButtons() {
+	function addEventListernesToButtons() {
 		//lytter til alle knapper om der bliver klikket
 		document.querySelectorAll("#filtrering_knap button").forEach(elm => {
 			elm.addEventListener("click", filtrering);
@@ -144,22 +124,53 @@ get_header();
 	}
 
 	function filtrering() {
-
 		//sætter filter variabel til at være lig med værdien af data-kategori atribut som den vakgte knap indeholder
-		filter = this.dataset.kategori;
+		filter = this.dataset.categories;
 		console.log(filter);
 
 		//fjerner valgt fra alle andre knapper som ikke er trykket
-		document.querySelectorAll("#filtrering button").forEach(elm =>
+		document.querySelectorAll("#filtrering_knap button").forEach(elm =>
 			elm.classList.remove("valgt"));
 
 		//tilføjer valgt class til den klikke knap
 		this.classList.add("valgt");
 
+		visProdukter();
 
-		//kalder visQuestions()
-		visQuestions();
+	}
 
+	function visProdukter() {
+		console.log(produkter);
+
+		//definere templatet som en variable
+		let temp = document.querySelector("template");
+		const liste = document.querySelector("#liste");
+
+		liste.innerHTML = "";
+
+		//opretter et konstant som en container, hvor templatet kan klones til.
+		const container = document.querySelector(".shop_indhold");
+		//looper arrayet igennem enkeltvis for hver af nedenstående kloning.
+		produkter.forEach(produkt => {
+			console.log(produkt);
+			if (filter == "alle" || produkt.categories.includes(parseInt(filter))) {
+				let klon = temp.cloneNode(true).content;
+				klon.querySelector("img").src = produkt.billede_2.guid;
+				klon.querySelector(".navn").textContent = produkt.produktnavn;
+				klon.querySelector(".pris").textContent = produkt.pris + " kr";
+
+				klon.querySelector("img").addEventListener("mouseover", () => {
+					console.log("Billede " + produkt.billede_1.guid);
+					klon.querySelector("img").src = produkt.billede_1.guid;
+				})
+
+				klon.querySelector("img").addEventListener("click", () => {
+					location.href = produkt.link;
+				})
+
+				container.appendChild(klon);
+			}
+		})
 	}
 
 </script>
