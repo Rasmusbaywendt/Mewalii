@@ -9,522 +9,473 @@ Author: Emma Svane
 
 /*GENEREL CSS*/
 
+h1 {
+    font-size: 40px !important;
+    text-transform: inherit !important;
+}
+h2 {
+    font-size: 25px !important;
+    font-weight: 600 !important;
+}
+h3 {
+    font-size: 20px !important;
+    font-weight: 600 !important;
+}
+p {
+    font-size: 16px;
+}
+button {
+    border-radius: 25px !important;
+    width: 140px !important;
+    font-size: 12px !important;
+    padding: 0px !important;
+}
 .neve-main {
-	background-color: #FCF2E8;
+    background-color: #FCF2E8;
 }
 
-/*NAVIGATION CSS*/
+/*----------FORSIDE CSS------------*/
 
-
-/*FOOTER CSS*/
-
-
-/*FORSIDE CSS*/
 .swiper-slide-inner {
-	padding: 10px;
+    padding: 10px;
 }
+#countdown {}
 
-
-/*SHOP CSS*/
+/*------------SHOP CSS------------*/
 
 .shop_title {
-	margin-left: 7wv;
-	color: #FFF;
-	text-transform: none;
+    margin-left: 7wv;
+    color: #FFF;
+    text-transform: none;
 }
-
 .shop_top {
-	background-color: #FCF2E8;
+    background-color: #FCF2E8;
 }
-
 .shop_top h1 {
-	margin-left: 7vw;
-	margin-bottom: 2.5vw;
-	margin-top: 2.5vw;
+    margin-left: 7vw;
+    margin-bottom: 2.5vw;
+    margin-top: 2.5vw;
 }
-
 .vejledning {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(250px, 250px));
-	margin: 0 auto;
-	justify-content: center;
-	grid-gap: 65px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 250px));
+    margin: 0 auto;
+    justify-content: center;
+    grid-gap: 65px;
 }
-
-
 .shop_indhold {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-gap: 30px;
-	background-color: white;
-	padding: 7vw;
-	padding-top: 3vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    background-color: white;
+    padding: 7vw;
+    padding-top: 3vw;
 }
-
 .shop_indhold img {
-	cursor: pointer;
+    cursor: pointer;
 }
-
 .temp_bund {
-	display: grid;
-	grid-template-columns: 2fr 1fr;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
 }
-
 .pris {
-	text-align: right;
+    text-align: right;
 }
-
 .shop_filtrering {
-	display: flex;
-	justify-content: center;
-	background-color: #EB7A6B;
-	padding: 2vw;
+    display: flex;
+    justify-content: center;
+    background-color: #EB7A6B;
+    padding: 2vw;
 }
-
 .box_soon {
-	position: absolute;
-	background-color: #FFF;
-	padding: 4px;
-	opacity: 0.6;
+    position: absolute;
+    background-color: #FFF;
+    padding: 4px;
+    opacity: 0.6;
 }
-
 .soon {
-	margin-bottom: 0;
+    margin-bottom: 0;
 }
-
 #filtrering_knap button {
-	margin-right: 15px;
-	cursor: pointer;
+    margin-right: 15px;
+    cursor: pointer;
 }
-
 #filtrering_knap button:hover {
-	background-color: #374031;
+    background-color: #374031;
 }
 
-
-/*MØD OS CSS*/
-
-
-/*GØR EN FORSKEL CSS*/
+/*---------------MENSTRUATIONS SNAK CSS---------------*/
 
 
-/*MENSTRUATIONS SNAK CSS*/
-
-
-/*----INTRO TIL MENSTRUATIONS SNAK SIDE-----*/
+/*INTRO TIL MENSTRUATIONS SNAK SIDE*/
 
 #snak_main {
-	/*    padding: 0 20px 0 20px;*/
-	background-color: white;
+    /*    padding: 0 20px 0 20px;*/
+    background-color: white;
 }
-
 #snak_intro {
-	background-color: #FCF2E8;
-	padding: 0 20px 0 20px;
+    background-color: #FCF2E8;
+    padding: 0 20px 0 20px;
 }
-
 #snak_h1 {
-	font-size: 35px;
-	text-transform: inherit;
-	margin: 10px auto 0 auto;
+    margin: 10px auto 0 auto;
 }
-
 #snak_img {
-	width: 70%;
-	margin: 0 auto 30px auto;
-	display: block;
-	padding-bottom: 30px;
+    width: 70%;
+    margin: 0 auto 30px auto;
+    display: block;
+    padding-bottom: 30px;
 }
 
-/*-----UGENS SPØRGSMÅL SEKTION-----*/
+/*UGENS SPØRGSMÅL SEKTION*/
 
 #pin_img {
-	width: 15px;
-	height: 29px;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+    width: 15px;
+    height: 29px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
-
-.snak_h2 {
-	font-size: 25px;
-	font-weight: 600;
-}
-
 #sporgsmaal_container {
-	display: grid;
-	grid-template-columns: 5% 95%;
-	grid-gap: 5px;
-	margin-left: 10px;
+    display: grid;
+    grid-template-columns: 5% 95%;
+    grid-gap: 5px;
+    margin-left: 10px;
 }
-
 #ugens_liste {
-	background-color: #FCF2E8;
-	border-top: 5px solid #EB7A6B;
-	padding-bottom: 15px;
-	margin-bottom: 20px;
+    background-color: #FCF2E8;
+    border-top: 5px solid #EB7A6B;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
 }
-
 #question_container {
-	background-color: #F9DFD6;
-	border: 1px solid #BC9C9A;
-	border-radius: 15px;
-	width: 80%;
-	padding: 5px;
-	margin: 15px auto 10px 10px;
+    background-color: #F9DFD6;
+    border: 1px solid #BC9C9A;
+    border-radius: 15px;
+    width: 80%;
+    padding: 5px;
+    margin: 15px auto 10px 10px;
 }
-
-#question_container h3 {
-	font-size: 18px;
-	font-weight: 600;
-	margin-bottom: 5px;
+#question_container p {
+    font-weight: 600;
+    margin-bottom: 5px;
 }
-
 #svar_container {
-	background-color: #FDF3F0;
-	border: 1px solid #BC9C9A;
-	border-radius: 15px;
-	width: 80%;
-	padding: 5px;
-	margin: 10px 10px 10px auto;
+    background-color: #FDF3F0;
+    border: 1px solid #BC9C9A;
+    border-radius: 15px;
+    width: 80%;
+    padding: 5px;
+    margin: 10px 10px 10px auto;
 }
-
 #uge_svar {
-	margin-bottom: 5px;
+    margin-bottom: 5px;
 }
 
-/*---FILTRERING-----*/
+/*FILTRERING*/
 
 #sporgsmaal .snak_h2 {
-	margin-left: 10px;
+    margin-left: 10px;
 }
-
 #filtrering {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	overflow-x: scroll;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    overflow-x: scroll;
 }
-
 #filtrering button:hover {
-	background-color: #374031;
+    background-color: #374031;
 }
 
 /*fjerner knap med kategori id 30*/
 
 [data-kategori="30"] {
-	display: none;
+    display: none;
 }
-
 .filter {
-	background-color: rgb(255, 0, 0, 0%);
-	border: 2px solid #374031;
-	border-radius: 25px;
-	width: 120px;
-	margin-left: 10px;
-	text-align: center;
-	padding: 5px;
-	color: black;
+    background-color: rgb(255, 0, 0, 0%);
+    border: 2px solid #374031;
+    margin-left: 10px;
+    text-align: center;
+    padding: 5px;
+    color: black;
 }
-
 .valgt {
-	color: white;
-	background-color: #374031;
+    color: white;
+    background-color: #374031;
 }
 
-/*-----SPØRGSMÅL SEKTION------*/
+/*SPØRGSMÅL SEKTION*/
 
 .question_container {
-	background-color: #F9DFD6;
-	border: 1px solid #BC9C9A;
-	border-radius: 15px;
-	width: 80%;
-	padding: 5px;
-	margin: 15px auto 10px 10px;
+    background-color: #F9DFD6;
+    border: 1px solid #BC9C9A;
+    border-radius: 15px;
+    width: 80%;
+    padding: 5px;
+    margin: 15px auto 10px 10px;
 }
-
 .question_container h3 {
-	font-size: 18px;
-	font-weight: 600;
-	margin-bottom: 5px;
+    margin-bottom: 5px;
 }
-
 .svar_container {
-	background-color: #FDF3F0;
-	border: 1px solid #BC9C9A;
-	border-radius: 15px;
-	width: 80%;
-	padding: 5px;
-	margin: 10px 10px 10px auto;
+    background-color: #FDF3F0;
+    border: 1px solid #BC9C9A;
+    border-radius: 15px;
+    width: 80%;
+    padding: 5px;
+    margin: 10px 10px 10px auto;
 }
-
 .svar_container p {
-	margin-bottom: 5px;
+    margin-bottom: 5px;
 }
-
 .question_wrapper {
-	background-color: #FCF2E8;
-	border-top: 5px solid #EB7A6B;
-	padding-bottom: 15px;
-	margin-top: 15px;
+    background-color: #FCF2E8;
+    border-top: 5px solid #EB7A6B;
+    padding-bottom: 15px;
+    margin-top: 15px;
 }
-
 #mere {
-	background-color: #F9DFD6;
-	border: 1px solid #EB7A6B;
-	border-radius: 25px;
-	color: #262626;
-	width: 120px;
-	display: block;
-	margin: 15px auto 0;
+    background-color: #F9DFD6;
+    border: 1px solid #EB7A6B;
+    border-radius: 25px;
+    color: #262626;
+    width: 120px;
+    display: block;
+    margin: 15px auto 0;
 }
 
-/*----FORMULAR SEKTION------*/
+/*FORMULAR SEKTION*/
 
 #formular .snak_h2 {
-	text-align: center;
-	margin-top: 30px;
+    text-align: center;
+    margin-top: 30px;
 }
-
 #formular_tekst {
-	margin: 10px auto;
-	text-align: center;
-	max-width: 500px;
+    margin: 10px auto;
+    text-align: center;
+    max-width: 500px;
 }
-
 #form {
-	background-color: #DBD0C7;
-	padding-bottom: 20px;
+    background-color: #DBD0C7;
+    padding-bottom: 20px;
 }
-
 #form_wrapper {
-	margin-top: 10px;
-	display: block;
-	width: 80vw;
-	margin: auto;
+    margin-top: 10px;
+    display: block;
+    width: 80vw;
+    margin: auto;
 }
-
 .form_container {
-	display: table-caption;
+    display: table-caption;
 }
-
 .input {
-	background-color: white !important;
-	border: 1px solid white !important;
-	border-radius: 0px !important;
-	width: 80vw;
+    background-color: white !important;
+    border: 1px solid white !important;
+    border-radius: 0px !important;
+    width: 80vw;
 }
-
 .label {
-	font-weight: 600;
-	margin: 10px auto 5px auto;
+    font-size: 15px !important;
+    font-weight: 600;
+    margin: 10px auto 5px auto;
 }
-
 #send_knap {
-	border-radius: 25px;
-	background-color: white;
-	color: #292929;
-	width: 150px;
-	padding: 12px;
-	display: block;
-	margin: 0 auto 0 auto;
+    border-radius: 25px;
+    background-color: white;
+    color: #292929;
+    width: 150px;
+    padding: 12px;
+    display: block;
+    margin: 0 auto 0 auto;
 }
 
-/*----------TABLET VERSION----------*/
+/*------TABLET VERSION------*/
 
 @media only screen and (min-width: 600px) {
-	#snak_intro {
-		display: grid;
-		grid-template-columns: 60% 40%;
-		padding: 20px 15px 0 15px;
-		margin-bottom: 20px;
-	}
-
-	#question_container {
-		width: 60%;
-		margin: 15px auto 10px 10%;
-	}
-
-	#svar_container {
-		width: 60%;
-		margin: 10px 10% 10px auto;
-	}
-
-	#filtrering {
-		display: inherit;
-		grid-template-columns: repeat(4, 1fr);
-		overflow-x: auto;
-	}
-
-	.shop_indhold {
-		grid-template-columns: 1fr 1fr 1fr;
-	}
+    #snak_intro {
+        display: grid;
+        grid-template-columns: 60% 40%;
+        padding: 20px 15px 0 15px;
+        margin-bottom: 20px;
+    }
+    #question_container {
+        width: 50%;
+        margin: 15px auto 10px 5%;
+    }
+    #svar_container {
+        width: 50%;
+        margin: 10px 5% 10px auto;
+    }
+    #filtrering {
+        display: inherit;
+        grid-template-columns: repeat(4, 1fr);
+        overflow-x: auto;
+    }
+    .question_container {
+        width: 50%;
+        margin: 15px auto 10px 5%;
+    }
+    .svar_container {
+        width: 50%;
+        margin: 10px 5% 10px auto;
+    }
+    .shop_indhold {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
 
 /*---------DESKTOP VERSION----------*/
 
 @media only screen and (min-width: 800px) {
-	p {
-		font-size: 15px;
-	}
-
-	#snak_intro_tekst {
-		max-width: 500px;
-		margin: 20px auto;
-	}
-
-	#snak_img {
-		width: 50%;
-		padding-bottom: 5px;
-	}
-
-	#sporgsmaal_container {
-		margin-left: 10%;
-	}
-
-	#sporgsmaal .snak_h2 {
-		margin-left: 12%;
-	}
-
-	#filtrering {
-		margin-left: 10%;
-	}
-
-	#question_container {
-		max-width: 40%;
-		margin: 20px auto 20px 20%;
-	}
-
-	#svar_container {
-		max-width: 40%;
-		margin: 10px 20% 20px auto;
-	}
-
-	#form_img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-	}
-
-	#form_wrapper {
-		max-width: 400px;
-	}
-
-	#formular_container {
-		display: grid;
-		grid-template-columns: 50% 50%;
-	}
-
-	#mere {
-		font-size: 13px;
-		width: 140px;
-	}
-
-	#mere:hover {
-		background-color: #EB7A6B;
-	}
-
-	.question_container {
-		width: 50%;
-		margin: 20px auto 20px 20%;
-	}
-
-	.svar_container {
-		width: 50%;
-		margin: 10px 20% 20px auto;
-	}
-
-	.input {
-		width: 380px !important;
-	}
-
-	.label {
-		font-size: 0.8em;
-		margin: 10px auto 0 auto;
-	}
-
-	.filter {
-		padding: 0px;
-		font-size: 12px;
-	}
-
-	.shop_indhold {
-		grid-template-columns: 1fr 1fr 1fr 1fr;
-	}
+    #snak_intro_tekst {
+        max-width: 500px;
+        margin: 20px auto;
+    }
+    #snak_img {
+        width: 50%;
+        padding-bottom: 5px;
+    }
+    #sporgsmaal_container {
+        margin-left: 10%;
+    }
+    #sporgsmaal .snak_h2 {
+        margin-left: 12%;
+    }
+    #filtrering {
+        margin-left: 10%;
+    }
+    #question_container {
+        max-width: 40%;
+        margin: 20px auto 20px 15%;
+    }
+    #svar_container {
+        max-width: 40%;
+        margin: 10px 15% 20px auto;
+    }
+    #form_img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    #form_wrapper {
+        max-width: 400px;
+    }
+    #formular_container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    #mere:hover {
+        background-color: #EB7A6B;
+    }
+    .question_container {
+        width: 40%;
+        margin: 20px auto 20px 15%;
+    }
+    .svar_container {
+        width: 40%;
+        margin: 10px 15% 20px auto;
+    }
+    .input {
+        width: 380px !important;
+    }
+    .label {
+        font-size: 10px;
+        margin: 10px auto 0 auto;
+    }
+    .shop_indhold {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
 }
 
-
-
-/*SINGLE SIDE CSS*/
+/*--------------SINGLE SIDE CSS----------------*/
 
 #single_h1 {
-	font-size: 25px;
-	font-weight: 500;
-	margin-bottom: 0px;
-	line-height: 2em;
+    margin-bottom: 0px;
+    line-height: 2em;
 }
-
 #single_h2 {
-	font-size: 20px;
-	font-weight: 600;
-	margin: 10px;
+    margin: 10px;
 }
-
 #overskrift_container {
-	display: flex;
-	flex-direction: row;
-	grid-gap: 10px;
-	margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    grid-gap: 10px;
+    margin-top: 10px;
 }
-
 #billede_container {
-	display: grid;
-	grid-template-columns: 75% 25%;
-	grid-gap: 10px;
-	margin: 10px;
+    display: grid;
+    grid-template-columns: 74% 26%;
+    grid-gap: 10px;
+    margin: 10px;
 }
-
 #beskrivelse {
-	margin: 10px;
+    margin: 10px;
 }
-
 #pris {
-	margin: 10px;
-	font-weight: 600;
+    margin: 10px;
+    font-weight: 600;
 }
-
 #bottom_section {
-	background-color: white;
+    background-color: white;
+    padding-top: 10px;
+    margin-top: 10px;
 }
-
+#forslaaede_container {
+    display: flex;
+    grid-gap: 10px;
+    overflow-x: scroll;
+    margin: 10px;
+    padding-bottom: 20px;
+}
+#tilbage {
+    margin: 22px 0;
+    margin-left: 10px;
+}
+.forslaa_billede {
+    width: 40%;
+}
 .button_single {
-	border-radius: 25px;
-	border: 1px solid #464646;
-	background-color: rgb(255, 255, 255, 0%);
-	color: #464646;
-	margin: 5px;
+    border-radius: 25px;
+    border: 1px solid #464646;
+    background-color: rgb(255, 255, 255, 0%);
+    color: #464646;
+    margin: 5px;
+}
+.ekstra_billede {
+    width: 90%;
 }
 
-.ekstra_billede {
-	width: 90%;
-}
+/*-----DESKTOP VERSION----*/
 
 @media only screen and (min-width: 800px) {
-	#top_section {
-		margin: 0 auto;
-		max-width: 1200px;
-	}
-
-	#produkt_wrapper {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-gap: 10px;
-	}
-
-	#beskrivelse {
-		max-width: 450px;
-	}
-
-	.button_single {
-		font-size: 12px;
-	}
+    #top_section {
+        margin: 0 auto;
+        max-width: 1200px;
+    }
+    #produkt_wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+    }
+    #single_h2 {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 10px;
+    }
+    #beskrivelse {
+        max-width: 450px;
+    }
+    #forslaaede_container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
+        overflow-x: scroll;
+        margin: 10px auto;
+        padding-bottom: 20px;
+        max-width: 1200px;
+        padding: 10px;
+    }
+    .forslaa_billede {
+        width: 100%;
+    }
 }

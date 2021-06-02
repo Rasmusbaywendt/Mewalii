@@ -37,7 +37,7 @@ get_header();?>
             </div>
             <div id="ugens_liste">
                 <div id="question_container">
-                    <h3 id="uge_question"></h3>
+                    <p id="uge_question"></p>
                 </div>
                 <div id="svar_container">
                     <p id="uge_svar"></p>
@@ -90,7 +90,7 @@ get_header();?>
         <template>
             <div class="question_wrapper">
                 <div class="question_container">
-                    <h3 id="question"></h3>
+                    <p id="question"></p>
                 </div>
                 <div class="svar_container">
                     <p id="svar"></p>
