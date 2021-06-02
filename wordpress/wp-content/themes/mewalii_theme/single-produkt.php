@@ -14,30 +14,38 @@ get_header();
 
     <main>
         <section id="top_section">
-            <div>
-                <button>tilbage</button>
-                <h1></h1>
+            <div id="overskrift_container">
+                <button id="tilbage" class="button_single">tilbage</button>
+                <h1 id="single_h1"></h1>
             </div>
-            <div>
-                <div>
+            <div id="produkt_wrapper">
+                <div id="billede_container">
                     <div>
                         <img id="main_pic" src="" alt="">
                     </div>
-                    <div>
-                        <img id="main_pic2" src="" alt="">
-                        <img id="second_pic" src="" alt="">
-                        <img id="third_pic" src="" alt="">
+                    <div id="ekstra_container">
+                        <img class="ekstra_billede" id="main_pic2" src="" alt="">
+                        <img class="ekstra_billede" id="second_pic" src="" alt="">
+                        <img class="ekstra_billede" id="third_pic" src="" alt="">
                     </div>
                 </div>
                 <div>
                     <p id="beskrivelse"></p>
                     <p id="pris"></p>
-                    <button>Læg i kurven</button>
+                    <button class="button_single">Læg i kurven</button>
                 </div>
             </div>
         </section>
 
-        <section id="bottom_section"></section>
+        <section id="bottom_section">
+            <h2 id="single_h2">Forslåede produkter til dig</h2>
+            <div>
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+            </div>
+        </section>
 
     </main>
 
@@ -75,22 +83,37 @@ get_header();
             document.querySelector("#main_pic").title = produkt.title.rendered;
 
             document.querySelector("#main_pic2").src = produkt.billede_1.guid;
-            document.querySelector("#main_pic2").alt = produkt.title.rendered;
-            document.querySelector("#main_pic2").title = produkt.title.rendered;
+            document.querySelector("#main_pic2").alt = produkt.title.rendered + "_2";
+            document.querySelector("#main_pic2").title = produkt.title.rendered + "_2";
 
-            document.querySelector("#second_pic").src = produkt.billede_2;
-            document.querySelector("#second_pic").alt = produkt.title.rendered;
-            document.querySelector("#second_pic").title = produkt.title.rendered;
+            document.querySelector("#second_pic").src = produkt.billede_2.guid;
+            document.querySelector("#second_pic").alt = produkt.title.rendered + "_3";
+            document.querySelector("#second_pic").title = produkt.title.rendered + "_3";
 
-            document.querySelector("#third_pic").src = produkt.billede_3;
-            document.querySelector("#third_pic").alt = produkt.title.rendered;
-            document.querySelector("#third_pic").title = produkt.title.rendered;
+            document.querySelector("#third_pic").src = produkt.billede_3.guid;
+            document.querySelector("#third_pic").alt = produkt.title.rendered + "_4";
+            document.querySelector("#third_pic").title = produkt.title.rendered + "_4";
 
             document.querySelector("#beskrivelse").textContent = produkt.beskrivelse;
-            document.querySelector("#pris").innerHTML = produkt.pris;
+            document.querySelector("#pris").innerHTML = produkt.pris + " kr";
 
+            document.querySelector("#tilbage").addEventListener("click", tilbageKnap);
 
+        }
 
+        //opretter konstant indeholdende de ekstra produkt billeder
+        const ekstraBilleder = document.querySelectorAll(".ekstra_billede");
+        //eventlistener der lytter til at der bliver klikket på de små billeder
+        ekstraBilleder.forEach(knap => knap.addEventListener("click", skiftBillede));
+
+        function skiftBillede() {
+            console.log(this);
+            //skifter det store billede ud med billedet, der er blevet klikket på
+            document.querySelector("#main_pic").src = this.src;
+        }
+
+        function tilbageKnap() {
+            history.back();
         }
 
     </script>
