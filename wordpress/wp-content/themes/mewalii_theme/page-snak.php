@@ -78,7 +78,7 @@ get_header();?>
                                 <textarea class="input" name="message" id="besked" cols="30" rows="10" placeholder="Hvad har du i tankerne?"></textarea>
                             </div>
                         </div>
-                        <input type="submit" value="Send" id="send_knap">
+                        <button id="send_knap">Send</button>
                     </form>
                 </div>
                 <div>

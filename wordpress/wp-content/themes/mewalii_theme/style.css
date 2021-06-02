@@ -39,7 +39,6 @@ button {
 .swiper-slide-inner {
     padding: 10px;
 }
-#countdown {}
 
 /*------------SHOP CSS------------*/
 
@@ -159,6 +158,7 @@ button {
 #question_container p {
     font-weight: 600;
     margin-bottom: 5px;
+    margin-left: 10px;
 }
 #svar_container {
     background-color: #FDF3F0;
@@ -214,8 +214,10 @@ button {
     padding: 5px;
     margin: 15px auto 10px 10px;
 }
-.question_container h3 {
+.question_container p {
+    font-weight: 600;
     margin-bottom: 5px;
+    margin-left: 10px;
 }
 .svar_container {
     background-color: #FDF3F0;
@@ -281,10 +283,9 @@ button {
 }
 #send_knap {
     border-radius: 25px;
-    background-color: white;
-    color: #292929;
-    width: 150px;
-    padding: 12px;
+    border: 1px solid #313131;
+    background-color: rgb(255, 255, 255, 0%);
+    color: #313131;
     display: block;
     margin: 0 auto 0 auto;
 }
@@ -436,10 +437,14 @@ button {
 }
 .button_single {
     border-radius: 25px;
-    border: 1px solid #464646;
+    border: 1px solid #374031;
     background-color: rgb(255, 255, 255, 0%);
-    color: #464646;
+    color: #374031;
     margin: 5px;
+}
+.button_single:hover {
+    background-color: #374031;
+    color: white;
 }
 .ekstra_billede {
     width: 90%;
