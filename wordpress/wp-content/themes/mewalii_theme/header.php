@@ -40,6 +40,7 @@ do_action( 'neve_html_start_before' );
 
                 <link rel="preconnect" href="https://fonts.gstatic.com">
                 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+                <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
 
                 <meta charset="<?php bloginfo( 'charset' ); ?>">
                 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
