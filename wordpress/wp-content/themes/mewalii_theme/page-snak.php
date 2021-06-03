@@ -50,6 +50,7 @@ get_header();?>
             <h2 class="snak_h2">Kategorier</h2>
             <nav id="filtrering"></nav>
             <div id="liste"></div>
+            <div id="liste_fortsat"></div>
             <button id="mere">Læs flere</button>
         </section>
 
@@ -59,7 +60,7 @@ get_header();?>
             <p id="formular_tekst">Vi vil meget gerne høre fra dig, hvis du har et spørgsmål eller noget du er nyssgerig på</p>
             <div id="formular_container">
                 <div>
-                    <form id="form" action="netlify">
+                    <form id="form" action="">
                         <div id="form_wrapper">
                             <div class="form_container">
                                 <label class="label" for="fname">Fornavn:</label>
@@ -78,8 +79,14 @@ get_header();?>
                                 <textarea class="input" name="message" id="besked" cols="30" rows="10" placeholder="Hvad har du i tankerne?"></textarea>
                             </div>
                         </div>
-                        <button id="send_knap">Send</button>
+
                     </form>
+                    <button id="send_knap">Send</button>
+
+                    <div id="sendt_besked">
+                        <p>Tak for din besked! Vi vil forsøge at besvare dit spørgsmål hurtigst muligt</p>
+                    </div>
+
                 </div>
                 <div>
                     <img id="form_img" src="<?php echo get_stylesheet_directory_uri()?>/img/rapsmark.jpg" alt="rapsmark">
@@ -118,13 +125,8 @@ get_header();?>
             const dbUrl = "http://emmasvane.dk/mewalii/mewalli/wp-json/wp/v2/qa?per_page=100";
             const dbCat = "http://emmasvane.dk/mewalii/mewalli/wp-json/wp/v2/categories";
 
-            //lytter til om DOM er loaded
-            document.addEventListener("DOMContentLoaded", start);
-
-            //når DOM er loaded kalder vi getJson funktionen
-            function start() {
-                getJson();
-            }
+            //lytter til om DOM er loaded og kalder getJson
+            document.addEventListener("DOMContentLoaded", getJson);
 
 
             //henter wp REST API ind
@@ -144,7 +146,16 @@ get_header();?>
 
                 //kald opretKnapper()
                 opretKnapper();
+
+                document.querySelector("#mere").addEventListener("click", læsFlere);
+
             }
+
+            function læsFlere() {
+                console.log("læsFlere");
+            }
+
+
 
             //opretter knapper
             function opretKnapper() {
@@ -155,7 +166,7 @@ get_header();?>
                 })
 
                 //tilføjer .valgt til knap med id 26
-                if (`data-kategori=26`) {
+                if (kategorier.id = 26) {
                     document.querySelector(".filter").classList.add("valgt");
                 }
 
@@ -200,26 +211,36 @@ get_header();?>
                 const skabelon = document.querySelector("template");
                 //opretter variabel til #liste
                 const liste = document.querySelector("#liste");
+                const listeFortsat = document.querySelector("#liste_fortsat");
 
                 //rydder liste hver gang der klikkes på ny kategori
                 liste.innerHTML = "";
 
 
                 //loop igennem json (questions) og sæt ind i template
-                questions.forEach(question => {
+                questions.forEach((question, i) => {
 
                     //hvis 'question' property (som er et array)indeholder den kategori jeg har klikket på, så skal den vises
                     //--'includes' er en indbygget js funktion som knytter sig til et array
                     //--'parseint' betyder at man laver 'filter' (som er tekst) om til et tal
                     if (question.categories.includes(26) || question.categories.includes(parseInt(filter))) {
 
+
                         const klon = skabelon.cloneNode(true).content;
                         //indsætter spørgsmål json ind i #question
                         klon.querySelector("#question").textContent = question.question;
                         //indsætter ssvar json ind i #uge_svar
                         klon.querySelector("#svar").innerHTML = question.svar + `<br> -Hanne, sygeplejerske`;
-                        //tillægger klonen til listen
-                        liste.appendChild(klon);
+
+                        if (i <= 3) {
+                            //tillægger klonen til listen
+                            liste.appendChild(klon);
+                        } else {
+                            //tillægger klonen til listen
+                            listeFortsat.appendChild(klon);
+                        }
+
+
                     }
                     //hvis spørgsmålet har kategorien med id 30 skal en vises
                     if (question.categories.includes(30)) {
@@ -230,6 +251,22 @@ get_header();?>
                     }
                 })
 
+                document.querySelector("#send_knap").addEventListener("click", sendBesked);
+
+            }
+
+            function sendBesked() {
+                console.log("besked sendt");
+                document.querySelector("#sendt_besked").style.display = "inline";
+
+                forsvindBesked();
+
+            }
+
+            function forsvindBesked() {
+                console.log("forsvind");
+
+                document.querySelector("#sendt_besked").classList.add("forsvind");
             }
 
         </script>

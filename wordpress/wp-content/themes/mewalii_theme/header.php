@@ -38,6 +38,9 @@ do_action( 'neve_html_start_before' );
 	do_action( 'neve_head_start_after' );
 	?>
 
+                <link rel="preconnect" href="https://fonts.gstatic.com">
+                <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
                 <meta charset="<?php bloginfo( 'charset' ); ?>">
                 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
                 <link rel="profile" href="http://gmpg.org/xfn/11">
@@ -54,6 +57,8 @@ do_action( 'neve_html_start_before' );
 	 */
 	do_action( 'neve_head_end_before' );
 	?>
+
+
 
         </head>
 
@@ -82,6 +87,8 @@ do_action( 'neve_body_start_after' );
                                     <a class="neve-skip-link show-on-focus" href="#content" tabindex="0">
                                         <?php echo __( 'Skip to content', 'neve' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
                                     </a>
+
+
                                     <?php
 
 		/**
@@ -102,6 +109,7 @@ do_action( 'neve_body_start_after' );
 		 */
 		do_action( 'neve_after_header_hook' );
 		?>
+                                        <img id="vogn" src="<?php echo get_stylesheet_directory_uri()?>/img/vogn.svg" alt="vogn">
 
                                 </header>
 
@@ -123,6 +131,7 @@ do_action( 'neve_body_start_after' );
 	 */
 	do_action( 'neve_before_primary' );
 	?>
+
 
                                         <main id="content" class="neve-main" role="main">
 

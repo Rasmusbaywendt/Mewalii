@@ -16,4 +16,13 @@ if ( have_posts() ) {
 		get_template_part( 'template-parts/content', 'pagebuilder' );
 	}
 }
+
+?>
+
+    <script>
+        document.querySelector(".elementor-110 .elementor-element.elementor-element-2213600 .elementor-heading-title").textContent = "Mikkel";
+
+    </script>
+
+    <?php
 get_footer();

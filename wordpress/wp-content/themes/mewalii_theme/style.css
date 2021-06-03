@@ -12,17 +12,21 @@ Author: Emma Svane
 h1 {
     font-size: 40px !important;
     text-transform: inherit !important;
+    font-family: 'Lato', sans-serif !important;
 }
 h2 {
     font-size: 25px !important;
     font-weight: 600 !important;
+    font-family: 'Lato', sans-serif !important;
 }
 h3 {
     font-size: 20px !important;
     font-weight: 600 !important;
+    font-family: 'Lato', sans-serif !important;
 }
 p {
     font-size: 16px;
+    font-family: 'Source Sans Pro', sans-serif !important;
 }
 button {
     border-radius: 25px !important;
@@ -32,6 +36,29 @@ button {
 }
 .neve-main {
     background-color: #FCF2E8;
+}
+.navbar-toggle {
+    width: 60px !important;
+    height: 30px;
+}
+.icon-bar {
+    margin-left: 22px;
+}
+.icon-bar:nth-child(2) {
+    margin: 3px 22px !important;
+}
+#vogn {
+    width: 30px;
+    height: 26px;
+    position: absolute;
+    right: 90px;
+    top: 17px;
+}
+@media only screen and (min-width: 960px) {
+    #vogn {
+        top: 23px;
+        right: 25px;
+    }
 }
 
 /*----------FORSIDE CSS------------*/
@@ -57,10 +84,12 @@ button {
 }
 .vejledning {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 250px));
+    grid-template-columns: repeat(3, 1fr);
     margin: 0 auto;
     justify-content: center;
     grid-gap: 65px;
+    padding-left: 65px;
+    max-width: 900px;
 }
 .shop_indhold {
     display: grid;
@@ -248,6 +277,9 @@ button {
 
 /*FORMULAR SEKTION*/
 
+#formular_container {
+    background-color: #DBD0C7;
+}
 #formular .snak_h2 {
     text-align: center;
     margin-top: 30px;
@@ -258,8 +290,7 @@ button {
     max-width: 500px;
 }
 #form {
-    background-color: #DBD0C7;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
 #form_wrapper {
     margin-top: 10px;
@@ -283,11 +314,25 @@ button {
 }
 #send_knap {
     border-radius: 25px;
-    border: 1px solid #313131;
+    border: 1px solid #374031;
     background-color: rgb(255, 255, 255, 0%);
-    color: #313131;
+    color: #374031;
     display: block;
-    margin: 0 auto 0 auto;
+    margin: 0 auto 15px auto;
+}
+#send_knap:hover {
+    background-color: #374031;
+    color: white;
+}
+#sendt_besked {
+    position: absolute;
+    left: 10%;
+    bottom: 400px;
+    width: 280px;
+    padding: 10px;
+    border: 1px solid #EB7A6B;
+    background-color: rgb(249, 223, 214, 60%);
+    display: none;
 }
 
 /*------TABLET VERSION------*/
@@ -386,6 +431,16 @@ button {
     .shop_indhold {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
+    .vejledning {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        margin: 0 auto;
+        justify-content: center;
+        grid-gap: 65px;
+        padding-left: 0px;
+        max-width: 900px;
+    }
 }
 
 /*--------------SINGLE SIDE CSS----------------*/
@@ -482,5 +537,26 @@ button {
     }
     .forslaa_billede {
         width: 100%;
+    }
+}
+
+/*animationer*/
+
+.forsvind {
+    animation-name: forsvind_kf;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes forsvind_kf {
+    0% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        display: none;
     }
 }
