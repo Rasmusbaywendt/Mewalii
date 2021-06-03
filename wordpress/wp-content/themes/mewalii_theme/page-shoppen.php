@@ -36,9 +36,7 @@ get_header();
         </section>
 
 
-        <section class="shop_indhold" id="liste">
-
-        </section>
+        <section class="shop_indhold"></section>
 
         <template>
             <div>
@@ -61,27 +59,26 @@ get_header();
     <?php get_footer(); ?>
 
         <script>
-            //Lav variable
-            let produkter = [];
+            //Lav variabel
+            let produkter;
             //Variable, der indeholder json kategorien
             let categories;
             //Variable til filter
             let filter = "alle";
 
-            //lyt om siden loader
-            document.addEventListener("DOMContentLoaded", start);
-
-
-            function start() {
-                console.log("start");
-                getJson();
-            }
 
             //opretter konstanter til json data for produkterne
             const url = "http://emmasvane.dk/mewalii/mewalli/wp-json/wp/v2/produkt?per_page=100";
             //opretter konstanter til json data for kategorierne
             const dbCat = "http://emmasvane.dk/mewalii/mewalli/wp-json/wp/v2/categories";
 
+            //lyt om siden loader
+            document.addEventListener("DOMContentLoaded", start);
+
+            function start() {
+                console.log("start");
+                getJson();
+            }
 
             //henter WP rest API
             async function getJson() {
@@ -115,9 +112,8 @@ get_header();
                 addEventListernesToButtons();
 
             }
-
+            //lytter til alle knapper om der bliver klikket
             function addEventListernesToButtons() {
-                //lytter til alle knapper om der bliver klikket
                 document.querySelectorAll("#filtrering_knap button").forEach(elm => {
                     elm.addEventListener("click", filtrering);
                 })
@@ -132,7 +128,7 @@ get_header();
                 document.querySelectorAll("#filtrering_knap button").forEach(elm =>
                     elm.classList.remove("valgt"));
 
-                //tilføjer valgt class til den klikke knap
+                //tilføjer valgt class til den klikkede knap
                 this.classList.add("valgt");
 
                 visProdukter();
@@ -144,25 +140,31 @@ get_header();
 
                 //definere templatet som en variable
                 let temp = document.querySelector("template");
-                const liste = document.querySelector("#liste");
-
-                liste.innerHTML = "";
-
                 //opretter et konstant som en container, hvor templatet kan klones til.
                 const container = document.querySelector(".shop_indhold");
+
+                container.innerHTML = "";
+
+
                 //looper arrayet igennem enkeltvis for hver af nedenstående kloning.
                 produkter.forEach(produkt => {
-                    console.log(produkt);
+                    console.log("produkt: ", produkt);
+
                     if (filter == "alle" || produkt.categories.includes(parseInt(filter))) {
                         let klon = temp.cloneNode(true).content;
                         klon.querySelector("img").src = produkt.billede_2.guid;
                         klon.querySelector(".navn").textContent = produkt.produktnavn;
                         klon.querySelector(".pris").textContent = produkt.pris + " kr";
 
-                        klon.querySelector("img").addEventListener("mouseover", () => {
-                            console.log("Billede " + produkt.billede_1.guid);
-                            klon.querySelector("img").src = produkt.billede_1.guid;
-                        })
+                        //ved mus henover billede skal den vise billede_2
+                        klon.querySelector("img").onmouseout = function() {
+                            this.src = produkt.billede_2.guid;
+                        };
+
+                        //ved mus væk fra billedet skal den vise billede_1 igen
+                        klon.querySelector("img").onmouseover = function() {
+                            this.src = produkt.billede_1.guid;
+                        };
 
                         klon.querySelector("img").addEventListener("click", () => {
                             location.href = produkt.link;
