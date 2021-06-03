@@ -54,8 +54,8 @@ button {
     right: 90px;
     top: 17px;
 }
-li.current-menu-item > a {
-    text-decoration: underline;
+.builder-item--secondary-menu .nav-ul:active {
+    color: #EB7A6B;
 }
 .countdown {
     font-size: 55px !important;
