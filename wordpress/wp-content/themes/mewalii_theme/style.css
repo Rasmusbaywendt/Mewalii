@@ -54,6 +54,9 @@ button {
     right: 90px;
     top: 17px;
 }
+.builder-item--secondary-menu .nav-ul:active {
+    color: #EB7A6B;
+}
 .countdown {
     font-size: 55px !important;
     font-family: 'Abril Fatface', cursive !important;
