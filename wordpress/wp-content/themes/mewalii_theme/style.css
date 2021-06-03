@@ -54,9 +54,6 @@ button {
     right: 90px;
     top: 17px;
 }
-li.current-menu-item > a {
-    text-decoration: underline;
-}
 .countdown {
     font-size: 55px !important;
     font-family: 'Abril Fatface', cursive !important;
