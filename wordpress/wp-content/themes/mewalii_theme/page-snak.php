@@ -118,8 +118,7 @@ get_header();?>
             //opretter global variabel der indeholder kateogri json
             let kategorier;
             //opretter global variabel til filter
-            let filter;
-
+            let filter = 26;
 
             //opretter konstanter til json data
             const dbUrl = "http://emmasvane.dk/mewalii/mewalli/wp-json/wp/v2/qa?per_page=100";
@@ -163,15 +162,21 @@ get_header();?>
             //opretter knapper
             function opretKnapper() {
 
+                let kategorier_vis = [26, 27, 28, 29, 36];
+
                 //opretter en knap for hver kategori, og tilføjer kategori navnet på knappen
                 kategorier.forEach(cat => {
-                    document.querySelector("#filtrering").innerHTML += `<button class="filter" data-kategori="${cat.id}">${cat.name}</button>`;
+                    if (kategorier_vis.includes(cat.id)) {
+                        document.querySelector("#filtrering").innerHTML += `<button class="filter" data-kategori="${cat.id}">${cat.name}</button>`;
+                    };
+
+                    if (cat.id == 26) {
+                        document.querySelector(".filter").classList.add("valgt");
+                    };
                 })
 
                 //tilføjer .valgt til knap med id 26
-                if (kategorier.id = 26) {
-                    document.querySelector(".filter").classList.add("valgt");
-                }
+
 
                 //kald addEventListenersToButtons()
                 addEventListenersToButtons();
@@ -218,24 +223,24 @@ get_header();?>
 
                 //rydder liste hver gang der klikkes på ny kategori
                 liste.innerHTML = "";
+                listeFortsat.innerHTML = "";
 
-
+                let tæller = 0;
                 //loop igennem json (questions) og sæt ind i template
-                questions.forEach((question, i) => {
+                questions.forEach((question) => {
 
                     //hvis 'question' property (som er et array)indeholder den kategori jeg har klikket på, så skal den vises
                     //--'includes' er en indbygget js funktion som knytter sig til et array
                     //--'parseint' betyder at man laver 'filter' (som er tekst) om til et tal
-                    if (question.categories.includes(26) || question.categories.includes(parseInt(filter))) {
-
-
+                    if (question.categories.includes(parseInt(filter))) {
                         const klon = skabelon.cloneNode(true).content;
                         //indsætter spørgsmål json ind i #question
                         klon.querySelector("#question").textContent = question.question;
                         //indsætter ssvar json ind i #uge_svar
                         klon.querySelector("#svar").innerHTML = question.svar + `<br> -Hanne, sygeplejerske`;
 
-                        if (i <= 3) {
+                        if (tæller <= 3) {
+                            console.log("liste");
                             //tillægger klonen til listen
                             liste.appendChild(klon);
                         } else {
@@ -243,6 +248,7 @@ get_header();?>
                             listeFortsat.appendChild(klon);
                         }
 
+                        tæller++;
 
                     }
                     //hvis spørgsmålet har kategorien med id 30 skal en vises

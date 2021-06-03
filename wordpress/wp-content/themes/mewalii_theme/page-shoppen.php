@@ -104,14 +104,30 @@ get_header();
             //opretter knapper
             function opretKnapper() {
 
-                //opretter en knap for hver kategori, og tilføjer kategori navnet på knappen
-                categories.forEach(cat => {
-                    document.querySelector("#filtrering_knap").innerHTML += `<button class="filter" data-categories="${cat.id}">${cat.name}</button>`;
-                })
+                let kategorierVis = [31, 32, 33, 34, 35];
 
+
+                categories.forEach(cat => {
+                    if (kategorierVis.includes(cat.id)) {
+                        console.log(document.querySelector("#filtrering_knap"));
+                        document.querySelector("#filtrering_knap").innerHTML += `<button class="filter" data-kategori="${cat.id}">${cat.name}</button>`;
+                    };
+                })
                 addEventListernesToButtons();
 
             }
+
+            //opretter en knap for hver kategori, og tilføjer kategori navnet på knappen
+            //            categories.forEach(cat => {
+            //                        if (kategorierVis.includes(cat.id)) {
+            //                            document.querySelector("#filtrering_knap").innerHTML += `<button class="filter" data-categories="${cat.id}">${cat.name}</button>`;
+            //                        })
+            //
+            //                    addEventListernesToButtons();
+            //
+            //                }
+
+
             //lytter til alle knapper om der bliver klikket
             function addEventListernesToButtons() {
                 document.querySelectorAll("#filtrering_knap button").forEach(elm => {
