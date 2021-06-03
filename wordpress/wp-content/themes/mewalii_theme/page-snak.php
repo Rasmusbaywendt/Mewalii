@@ -128,6 +128,7 @@ get_header();?>
             //lytter til om DOM er loaded og kalder getJson
             document.addEventListener("DOMContentLoaded", getJson);
 
+            document.querySelector("#liste_fortsat").classList.add("hide");
 
             //henter wp REST API ind
             async function getJson() {
@@ -153,6 +154,8 @@ get_header();?>
 
             function læsFlere() {
                 console.log("læsFlere");
+
+                document.querySelector("#liste_fortsat").classList.remove("hide");
             }
 
 

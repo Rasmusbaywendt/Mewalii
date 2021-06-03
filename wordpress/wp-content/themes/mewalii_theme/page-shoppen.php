@@ -17,16 +17,16 @@ get_header();
             <h1>Sådan fungerer det</h1>
             <div class="vejledning">
                 <div class="udvaelgelse">
-                    <img src="<?php echo get_stylesheet_directory_uri()?>/1_saadan_gor_du.svg" alt="illustration af bind og tamponer">
-                    <p>Udvælg dine favoritter</p>
+                    <img class="vejledning_img" src="<?php echo get_stylesheet_directory_uri()?>/1_saadan_gor_du.svg" alt="illustration af bind og tamponer">
+                    <p>UDVÆLG</p>
                 </div>
                 <div class="bestil_og_faa">
-                    <img src="<?php echo get_stylesheet_directory_uri()?>/2_saadan_gor_du.svg" alt="illustration af en pakke">
-                    <p>Bestil og få produkterne sendt direkte hjem til dig</p>
+                    <img class="vejledning_img" src="<?php echo get_stylesheet_directory_uri()?>/2_saadan_gor_du.svg" alt="illustration af en pakke">
+                    <p>BESTIL</p>
                 </div>
                 <div class="tak_dig_selv">
-                    <img src="<?php echo get_stylesheet_directory_uri()?>/3_saadan_gor_du.svg" alt="illustration af en hånd og en plante">
-                    <p>Tak dig selv for at bidrage til en mere bæredygtig hverdag</p>
+                    <img class="vejledning_img" src="<?php echo get_stylesheet_directory_uri()?>/3_saadan_gor_du.svg" alt="illustration af en hånd og en plante">
+                    <p>BIDRAG</p>
                 </div>
             </div>
         </section>
