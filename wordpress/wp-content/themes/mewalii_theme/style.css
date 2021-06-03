@@ -54,6 +54,9 @@ button {
     right: 90px;
     top: 17px;
 }
+
+li.current-menu-item > a {text-decoration:underline;}
+
 @media only screen and (min-width: 960px) {
     #vogn {
         top: 23px;
@@ -87,8 +90,8 @@ button {
     grid-template-columns: repeat(3, 1fr);
     margin: 0 auto;
     justify-content: center;
-    padding: 10px;
-    grid-gap: 45px;
+    grid-gap: 65px;
+    padding-left: 65px;
     max-width: 900px;
 }
 .shop_indhold {
@@ -130,19 +133,6 @@ button {
 }
 #filtrering_knap button:hover {
     background-color: #374031;
-}
-.udvaelgelse p {
-    text-align: center;
-}
-.bestil_og_faa p {
-    text-align: center;
-}
-.tak_dig_selv {
-    text-align: center;
-}
-.vejledning_img {
-    display: block;
-    margin: 0 auto;
 }
 
 /*---------------MENSTRUATIONS SNAK CSS---------------*/
@@ -444,6 +434,16 @@ button {
     .shop_indhold {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
+    .vejledning {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        margin: 0 auto;
+        justify-content: center;
+        grid-gap: 65px;
+        padding-left: 0px;
+        max-width: 900px;
+    }
 }
 
 /*--------------SINGLE SIDE CSS----------------*/
@@ -541,12 +541,6 @@ button {
     .forslaa_billede {
         width: 100%;
     }
-}
-
-/*effekter*/
-
-.hide {
-    display: none;
 }
 
 /*animationer*/
