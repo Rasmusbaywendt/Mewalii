@@ -172,6 +172,14 @@ input[type="submit"] {
     font-size: 14px !important;
     color: #374031 !important;
 }
+.btn,
+.button,
+.wp-block-button a,
+button,
+input[type="button"],
+input[type="submit"]:hover {
+    color: #fff !important;
+}
 
 /*---------------MENSTRUATIONS SNAK CSS---------------*/
 
