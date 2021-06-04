@@ -161,6 +161,15 @@ button {
     display: block;
     margin: 0 auto;
 }
+.btn,
+.button,
+.wp-block-button a,
+button,
+input[type="button"],
+input[type="submit"] {
+    font-weight: 400;
+    text-transform: none;
+}
 
 /*---------------MENSTRUATIONS SNAK CSS---------------*/
 
