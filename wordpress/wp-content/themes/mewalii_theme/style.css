@@ -169,6 +169,7 @@ input[type="button"],
 input[type="submit"] {
     font-weight: 400 !important;
     text-transform: none !important;
+    font-size: 14px !important;
 }
 
 /*---------------MENSTRUATIONS SNAK CSS---------------*/
