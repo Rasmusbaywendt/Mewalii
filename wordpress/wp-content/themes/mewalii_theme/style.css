@@ -128,8 +128,6 @@ button {
     text-align: right;
 }
 .shop_filtrering {
-    display: flex;
-    justify-content: center;
     background-color: #FCF2E8;
     padding: 2vw;
     border-top: 7px solid #EB7A6B;
@@ -142,8 +140,13 @@ button {
 .soon {
     margin-bottom: 0;
 }
+#filtrering_knap {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    overflow-x: scroll;
+}
 #filtrering_knap button {
-    margin-right: 15px;
+    margin-left: 10px;
     cursor: pointer;
 }
 .udvaelgelse p {
@@ -249,7 +252,7 @@ input[type="submit"] {
 }
 #filtrering {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     overflow-x: scroll;
 }
 #filtrering button:hover {
@@ -395,7 +398,6 @@ input[type="submit"] {
     }
     #filtrering {
         display: inherit;
-        grid-template-columns: repeat(4, 1fr);
         overflow-x: auto;
     }
     .question_container {
@@ -411,6 +413,13 @@ input[type="submit"] {
     }
     .countdown {
         margin-top: 160px;
+    }
+    #filtrering_knap {
+        display: inherit;
+        overflow-x: auto;
+    }
+    .shop_filtrering {
+        padding-left: 7%;
     }
 }
 

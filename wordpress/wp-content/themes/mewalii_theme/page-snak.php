@@ -89,7 +89,7 @@ get_header();?>
 
                 </div>
                 <div>
-                    <img id="form_img" src="<?php echo get_stylesheet_directory_uri()?>/img/produkt_strand.jpg" alt="bind">
+                    <img id="form_img" src="<?php echo get_stylesheet_directory_uri()?>/img/strand.jpg" alt="bind">
                 </div>
             </div>
         </section>

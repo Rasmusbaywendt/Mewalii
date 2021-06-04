@@ -43,7 +43,7 @@ get_header();
                     <div class="box_soon">
                         <p class="soon">Kommer snart</p>
                     </div>
-                    <img src="" alt="">
+                    <img src="" alt="" width="901" height="901">
                 </div>
                 <div class="temp_bund">
                     <b class="navn"></b>
@@ -72,12 +72,14 @@ get_header();
             const dbCat = "http://emmasvane.dk/mewalii/mewalli/wp-json/wp/v2/categories";
 
             //lyt om siden loader
-            document.addEventListener("DOMContentLoaded", start);
+            //document.addEventListener("DOMContentLoaded", start);
 
-            function start() {
-                console.log("start");
-                getJson();
-            }
+            getJson();
+
+            //            function start() {
+            //                console.log("start");
+            //                getJson();
+            //            }
 
             //henter WP rest API
             async function getJson() {
@@ -158,6 +160,8 @@ get_header();
                     if (filter == "alle" || produkt.categories.includes(parseInt(filter))) {
                         let klon = temp.cloneNode(true).content;
                         klon.querySelector("img").src = produkt.billede_2.guid;
+                        klon.querySelector("img").width = "901";
+                        klon.querySelector("img").height = "901";
                         klon.querySelector(".navn").textContent = produkt.produktnavn;
                         klon.querySelector(".pris").textContent = produkt.pris + " kr";
 
