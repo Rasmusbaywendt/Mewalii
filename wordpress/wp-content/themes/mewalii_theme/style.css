@@ -167,8 +167,8 @@ button {
 button,
 input[type="button"],
 input[type="submit"] {
-    font-weight: 400;
-    text-transform: none;
+    font-weight: 400 !important;
+    text-transform: none !important;
 }
 
 /*---------------MENSTRUATIONS SNAK CSS---------------*/
