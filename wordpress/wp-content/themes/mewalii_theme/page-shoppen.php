@@ -110,22 +110,12 @@ get_header();
                 categories.forEach(cat => {
                     if (kategorierVis.includes(cat.id)) {
                         console.log(document.querySelector("#filtrering_knap"));
-                        document.querySelector("#filtrering_knap").innerHTML += `<button class="filter" data-kategori="${cat.id}">${cat.name}</button>`;
+                        document.querySelector("#filtrering_knap").innerHTML += `<button class="filter" data-categories="${cat.id}">${cat.name}</button>`;
                     };
                 })
                 addEventListernesToButtons();
 
             }
-
-            //opretter en knap for hver kategori, og tilføjer kategori navnet på knappen
-            //            categories.forEach(cat => {
-            //                        if (kategorierVis.includes(cat.id)) {
-            //                            document.querySelector("#filtrering_knap").innerHTML += `<button class="filter" data-categories="${cat.id}">${cat.name}</button>`;
-            //                        })
-            //
-            //                    addEventListernesToButtons();
-            //
-            //                }
 
 
             //lytter til alle knapper om der bliver klikket
