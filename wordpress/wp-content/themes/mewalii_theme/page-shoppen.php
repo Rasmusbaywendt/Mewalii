@@ -30,7 +30,6 @@ get_header();
                 </div>
             </div>
         </section>
-
         <section class="shop_filtrering">
             <nav id="filtrering_knap"></nav>
         </section>

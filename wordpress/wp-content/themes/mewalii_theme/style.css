@@ -25,7 +25,7 @@ h3 {
     font-family: 'Lato', sans-serif !important;
 }
 p {
-    font-size: 16px;
+    font-size: 15px;
     font-family: 'Source Sans Pro', sans-serif !important;
 }
 button {
@@ -129,14 +129,14 @@ button {
 .shop_filtrering {
     display: flex;
     justify-content: center;
-    background-color: #EB7A6B;
+    background-color: #FCF2E8;
     padding: 2vw;
+    border-top: 7px solid #EB7A6B;
 }
 .box_soon {
     position: absolute;
-    background-color: #FFF;
+    background-color: rgba(255, 255, 255, 0.63);
     padding: 4px;
-    opacity: 0.6;
 }
 .soon {
     margin-bottom: 0;
@@ -175,9 +175,7 @@ input[type="submit"] {
 .btn,
 .button,
 .wp-block-button a,
-button,
-input[type="button"],
-input[type="submit"]:hover {
+button:hover {
     color: #fff !important;
 }
 
