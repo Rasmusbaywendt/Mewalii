@@ -146,9 +146,6 @@ button {
     margin-right: 15px;
     cursor: pointer;
 }
-#filtrering_knap button:hover {
-    background-color: #374031;
-}
 .udvaelgelse p {
     text-align: center;
 }
@@ -171,13 +168,9 @@ input[type="submit"] {
     font-weight: 400 !important;
     text-transform: none !important;
     font-size: 14px !important;
-    color: #374031 !important;
 }
-.btn,
-.button,
-.wp-block-button a,
-button:hover {
-    color: #fff !important;
+#filtrering_knap button:hover {
+    background-color: #374031;
 }
 
 /*---------------MENSTRUATIONS SNAK CSS---------------*/
@@ -274,7 +267,7 @@ button:hover {
     margin-left: 10px;
     text-align: center;
     padding: 5px;
-    color: black;
+    color: #374031;
 }
 .valgt {
     color: white;
