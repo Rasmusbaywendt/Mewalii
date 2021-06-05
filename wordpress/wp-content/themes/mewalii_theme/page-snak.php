@@ -147,16 +147,7 @@ get_header();?>
                 //kald opretKnapper()
                 opretKnapper();
 
-                document.querySelector("#mere").addEventListener("click", læsFlere);
-
             }
-
-            function læsFlere() {
-                console.log("læsFlere");
-
-                document.querySelector("#liste_fortsat").classList.remove("hide");
-            }
-
 
 
             //opretter knapper
@@ -225,7 +216,9 @@ get_header();?>
                 liste.innerHTML = "";
                 listeFortsat.innerHTML = "";
 
+                //opretter variabel som er lig med 0
                 let tæller = 0;
+
                 //loop igennem json (questions) og sæt ind i template
                 questions.forEach((question) => {
 
@@ -248,6 +241,7 @@ get_header();?>
                             listeFortsat.appendChild(klon);
                         }
 
+                        //lægger én til tæller variabel
                         tæller++;
 
                     }
@@ -260,9 +254,38 @@ get_header();?>
                     }
                 })
 
+                //lytter til klik på send knappen
                 document.querySelector("#send_knap").addEventListener("click", sendBesked);
 
+                //lytter til klik på 'læs mere'-knap
+                document.querySelector("#mere").addEventListener("click", læsFlere);
+
             }
+
+            function læsFlere() {
+                console.log("læsFlere");
+
+                //ændrer tekst på knap til "læs mindre"
+                document.querySelector("#mere").textContent = "Læs mindre";
+                //fjerner eventlistener
+                document.querySelector("#mere").removeEventListener("click", læsFlere);
+                //fjerner hide class fra #liste_fortsat
+                document.querySelector("#liste_fortsat").classList.remove("hide");
+                //lytter til klik på mere knap og kalder læsMindre funktion
+                document.querySelector("#mere").addEventListener("click", læsMindre);
+            }
+
+            function læsMindre() {
+                //ændrer tekst på knap til "læs mere"
+                document.querySelector("#mere").textContent = "Læs mere";
+                //tilføjer hide class til #liste_fortsat
+                document.querySelector("#liste_fortsat").classList.add("hide");
+                //lytter til klik på mere knap og kalder læsFlere funktion
+                document.querySelector("#mere").addEventListener("click", læsFlere);
+
+            }
+
+
 
             function sendBesked() {
                 console.log("besked sendt");

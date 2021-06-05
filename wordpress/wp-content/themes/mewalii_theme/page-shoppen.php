@@ -67,19 +67,17 @@ get_header();
 
 
             //opretter konstanter til json data for produkterne
-            const url = "http://emmasvane.dk/mewalii/mewalli/wp-json/wp/v2/produkt?per_page=100";
+            const url = "http://emmasvane.dk/mewalii/mewalli/wp-json/wp/v2/produkt?per_page=10";
             //opretter konstanter til json data for kategorierne
-            const dbCat = "http://emmasvane.dk/mewalii/mewalli/wp-json/wp/v2/categories";
+            const dbCat = "http://emmasvane.dk/mewalii/mewalli/wp-json/wp/v2/categories?per_page=12";
 
             //lyt om siden loader
-            //document.addEventListener("DOMContentLoaded", start);
+            document.addEventListener("DOMContentLoaded", start);
 
-            getJson();
-
-            //            function start() {
-            //                console.log("start");
-            //                getJson();
-            //            }
+            function start() {
+                console.log("start");
+                getJson();
+            }
 
             //henter WP rest API
             async function getJson() {
@@ -105,7 +103,7 @@ get_header();
             //opretter knapper
             function opretKnapper() {
 
-                let kategorierVis = [31, 32, 33, 34, 35];
+                let kategorierVis = [31, 32, 33, 34, 35, 37];
 
 
                 categories.forEach(cat => {
