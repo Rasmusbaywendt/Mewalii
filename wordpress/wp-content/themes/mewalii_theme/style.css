@@ -10,170 +10,203 @@ Author: Emma Svane
 /*GENEREL CSS*/
 
 h1 {
-    font-size: 40px !important;
-    text-transform: inherit !important;
-    font-family: 'Lato', sans-serif !important;
+	font-size: 40px !important;
+	text-transform: inherit !important;
+	font-family: 'Lato', sans-serif !important;
 }
+
 h2 {
-    font-size: 25px !important;
-    /*font-weight: 600 !important;*/
-    font-family: 'Lato', sans-serif !important;
+	font-size: 25px !important;
+	/*font-weight: 600 !important;*/
+	font-family: 'Lato', sans-serif !important;
 }
+
 h3 {
-    font-size: 20px !important;
-    /*font-weight: 600 !important;*/
-    font-family: 'Lato', sans-serif !important;
+	font-size: 20px !important;
+	/*font-weight: 600 !important;*/
+	font-family: 'Lato', sans-serif !important;
 }
+
 p {
-    font-size: 15px;
-    font-family: 'Source Sans Pro', sans-serif !important;
+	font-size: 15px;
+	font-family: 'Source Sans Pro', sans-serif !important;
 }
+
 button {
-    border-radius: 25px !important;
-    width: 121px !important;
-    font-size: 15px !important;
-    padding: 0px !important;
+	border-radius: 25px !important;
+	width: 121px !important;
+	font-size: 15px !important;
+	padding: 0px !important;
 }
+
 .neve-main {
-    background-color: #FCF2E8;
+	background-color: #FCF2E8;
 }
+
 .navbar-toggle {
-    width: 60px !important;
-    height: 30px;
+	width: 60px !important;
+	height: 30px;
 }
+
 .icon-bar {
-    margin-left: 22px;
+	margin-left: 22px;
 }
+
 .icon-bar:nth-child(2) {
-    margin: 3px 22px !important;
+	margin: 3px 22px !important;
 }
+
 #vogn {
-    width: 30px;
-    height: 26px;
-    position: absolute;
-    right: 90px;
-    top: 17px;
+	width: 30px;
+	height: 26px;
+	position: absolute;
+	right: 90px;
+	top: 17px;
 }
+
 .builder-item--secondary-menu .nav-ul:active {
-    color: #EB7A6B;
+	color: #EB7A6B;
 }
+
 .countdown {
-    font-size: 55px !important;
-    font-family: 'Abril Fatface', cursive !important;
-    margin-top: 75px;
+	font-size: 55px !important;
+	font-family: 'Abril Fatface', cursive !important;
+	margin-top: 75px;
 }
+
 @media only screen and (min-width: 960px) {
-    #vogn {
-        top: 23px;
-        right: 25px;
-    }
+	#vogn {
+		top: 23px;
+		right: 25px;
+	}
 }
 
 /*----------FORSIDE CSS------------*/
 
 .swiper-slide-inner {
-    padding: 10px;
+	padding: 10px;
 }
+
 .elementor-110 .elementor-element.elementor-element-4429bc5 fieldset {
-    font-weight: 400;
+	font-weight: 400;
 }
+
 .elementor-110 .elementor-element.elementor-element-c0bf94d .elementor-heading-title {
-    color: #374031;
+	color: #374031;
 }
+
 [id^="ays_finish_quiz_"] .action-button {
-    font-weight: 400;
+	font-weight: 400;
 }
 
 /*------------SHOP CSS------------*/
 
 .shop_title {
-    margin-left: 7wv;
-    color: #FFF;
-    text-transform: none;
+	margin-left: 7wv;
+	color: #FFF;
+	text-transform: none;
 }
+
 .shop_top {
-    background-color: #FCF2E8;
+	background-color: #FCF2E8;
 }
+
 .shop_top h1 {
-    margin-left: 7vw;
-    margin-bottom: 2.5vw;
-    margin-top: 2.5vw;
+	margin-left: 7vw;
+	margin-bottom: 2.5vw;
+	margin-top: 2.5vw;
 }
+
 .vejledning {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin: 0 auto;
-    justify-content: center;
-    padding: 10px;
-    grid-gap: 45px;
-    max-width: 900px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	margin: 0 auto;
+	justify-content: center;
+	padding: 10px;
+	grid-gap: 45px;
+	max-width: 900px;
 }
+
 .shop_indhold {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 30px;
-    background-color: white;
-    padding: 7vw;
-    padding-top: 3vw;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 30px;
+	background-color: white;
+	padding: 7vw;
+	padding-top: 3vw;
 }
+
 .shop_indhold img {
-    cursor: pointer;
+	cursor: pointer;
 }
+
 .temp_bund {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    font-size: 17px !important;
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	font-size: 17px !important;
 }
+
 .pris {
-    text-align: right;
+	text-align: right;
 }
+
 .shop_filtrering {
-    background-color: #FCF2E8;
-    padding: 2vw;
-    border-top: 7px solid #EB7A6B;
+	background-color: #FCF2E8;
+	padding: 2vw;
+	border-top: 2px solid #EB7A6B;
 }
+
 .box_soon {
-    position: absolute;
-    background-color: rgba(255, 255, 255, 0.63);
-    padding: 4px;
+	position: absolute;
+	background-color: rgba(255, 255, 255, 0.63);
+	padding: 4px;
 }
+
 .soon {
-    margin-bottom: 0;
+	margin-bottom: 0;
 }
+
 #filtrering_knap {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    overflow-x: scroll;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	overflow-x: scroll;
 }
+
 #filtrering_knap button {
-    margin-left: 10px;
-    cursor: pointer;
+	margin-left: 10px;
+	cursor: pointer;
 }
+
 .udvaelgelse p {
-    text-align: center;
+	text-align: center;
 }
+
 .bestil_og_faa p {
-    text-align: center;
+	text-align: center;
 }
+
 .tak_dig_selv {
-    text-align: center;
+	text-align: center;
 }
+
 .vejledning_img {
-    display: block;
-    margin: 0 auto;
+	display: block;
+	margin: 0 auto;
 }
+
 .btn,
 .button,
 .wp-block-button a,
 button,
 input[type="button"],
 input[type="submit"] {
-    font-weight: 400 !important;
-    text-transform: none !important;
-    font-size: 14px !important;
+	font-weight: 400 !important;
+	text-transform: none !important;
+	font-size: 14px !important;
 }
+
 #filtrering_knap button:hover {
-    background-color: #374031;
+	background-color: #374031;
 }
 
 /*---------------MENSTRUATIONS SNAK CSS---------------*/
@@ -182,433 +215,502 @@ input[type="submit"] {
 /*INTRO TIL MENSTRUATIONS SNAK SIDE*/
 
 #snak_main {
-    /*    padding: 0 20px 0 20px;*/
-    background-color: white;
+	/*    padding: 0 20px 0 20px;*/
+	background-color: white;
 }
+
 #snak_intro {
-    background-color: #FCF2E8;
-    padding: 0 20px 0 20px;
+	background-color: #FCF2E8;
+	padding: 0 20px 0 20px;
 }
+
 #snak_h1 {
-    margin: 10px auto 0 auto;
+	margin: 10px auto 0 auto;
 }
+
 #snak_img {
-    width: 70%;
-    margin: 0 auto 30px auto;
-    display: block;
-    padding-bottom: 30px;
+	width: 70%;
+	margin: 0 auto 30px auto;
+	display: block;
+	padding-bottom: 30px;
 }
 
 /*UGENS SPØRGSMÅL SEKTION*/
 
 #pin_img {
-    width: 15px;
-    height: 29px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+	width: 15px;
+	height: 29px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
+
 #sporgsmaal_container {
-    display: grid;
-    grid-template-columns: 5% 95%;
-    grid-gap: 5px;
-    margin-left: 10px;
+	display: grid;
+	grid-template-columns: 5% 95%;
+	grid-gap: 5px;
+	margin-left: 10px;
 }
+
 #ugens_liste {
-    background-color: #FCF2E8;
-    border-top: 5px solid #EB7A6B;
-    padding-bottom: 15px;
-    margin-bottom: 20px;
+	background-color: #FCF2E8;
+	border-top: 2px solid #EB7A6B;
+	padding-bottom: 15px;
+	margin-bottom: 20px;
 }
+
 #question_container {
-    background-color: #F9DFD6;
-    border: 1px solid #BC9C9A;
-    border-radius: 15px;
-    width: 80%;
-    padding: 5px;
-    margin: 15px auto 10px 10px;
+	background-color: #F9DFD6;
+	border-radius: 15px;
+	width: 80%;
+	padding: 10px;
+	margin: 15px auto 10px 10px;
 }
+
 #question_container p {
-    font-weight: 600;
-    margin-bottom: 5px;
-    margin-left: 10px;
+	font-weight: 600;
+	margin-bottom: 5px;
+	margin-left: 10px;
 }
+
 #svar_container {
-    background-color: #FDF3F0;
-    border: 1px solid #BC9C9A;
-    border-radius: 15px;
-    width: 80%;
-    padding: 5px;
-    margin: 10px 10px 10px auto;
+	background-color: #FFF;
+	border-radius: 15px;
+	width: 80%;
+	padding: 10px;
+	margin: 10px 10px 10px auto;
 }
+
 #uge_svar {
-    margin-bottom: 5px;
+	margin-bottom: 5px;
 }
 
 /*FILTRERING*/
 
 #sporgsmaal .snak_h2 {
-    margin-left: 10px;
+	margin-left: 10px;
 }
+
 #filtrering {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    overflow-x: scroll;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	overflow-x: scroll;
 }
+
 #filtrering button:hover {
-    background-color: #374031;
+	background-color: #374031;
 }
 
 /*fjerner knap med kategori id 30*/
 
 [data-kategori="30"] {
-    display: none;
+	display: none;
 }
+
 .filter {
-    background-color: rgb(255, 0, 0, 0%);
-    border: 2px solid #374031;
-    margin-left: 10px;
-    text-align: center;
-    padding: 5px;
-    color: #374031;
+	background-color: rgb(255, 0, 0, 0%);
+	border: 2px solid #374031;
+	margin-left: 10px;
+	text-align: center;
+	padding: 5px;
+	color: #374031;
 }
+
 .valgt {
-    color: white;
-    background-color: #374031;
+	color: white;
+	background-color: #374031;
 }
 
 /*SPØRGSMÅL SEKTION*/
 
 .question_container {
-    background-color: #F9DFD6;
-    border: 1px solid #BC9C9A;
-    border-radius: 15px;
-    width: 80%;
-    padding: 5px;
-    margin: 15px auto 10px 10px;
+	background-color: #F9DFD6;
+	border-radius: 15px;
+	width: 80%;
+	padding: 10px;
+	margin: 15px auto 10px 10px;
 }
+
 .question_container p {
-    font-weight: 600;
-    margin-bottom: 5px;
-    margin-left: 10px;
+	font-weight: 600;
+	margin-bottom: 5px;
+	margin-left: 10px;
 }
+
 .svar_container {
-    background-color: #FDF3F0;
-    border: 1px solid #BC9C9A;
-    border-radius: 15px;
-    width: 80%;
-    padding: 5px;
-    margin: 10px 10px 10px auto;
+	background-color: #FFF;
+	border-radius: 15px;
+	width: 80%;
+	padding: 10px;
+	margin: 10px 10px 10px auto;
 }
+
 .svar_container p {
-    margin-bottom: 5px;
+	margin-bottom: 5px;
 }
+
 .question_wrapper {
-    background-color: #FCF2E8;
-    border-top: 5px solid #EB7A6B;
-    padding-bottom: 15px;
-    margin-top: 15px;
+	background-color: #FCF2E8;
+	border-top: 2px solid #EB7A6B;
+	padding-bottom: 15px;
+	margin-top: 15px;
 }
+
 #mere {
-    background-color: #F9DFD6;
-    border: 1px solid #EB7A6B;
-    border-radius: 25px;
-    color: #262626;
-    width: 120px;
-    display: block;
-    margin: 15px auto 0;
+	background-color: #F9DFD6;
+	border: 1px solid #EB7A6B;
+	border-radius: 25px;
+	color: #262626;
+	width: 120px;
+	display: block;
+	margin: 15px auto 0;
 }
 
 /*FORMULAR SEKTION*/
 
 #formular_container {
-    background-color: #DBD0C7;
+	background-color: #DBD0C7;
 }
+
 #formular .snak_h2 {
-    text-align: center;
-    margin-top: 30px;
+	text-align: center;
+	margin-top: 30px;
 }
+
 #formular_tekst {
-    margin: 10px auto;
-    text-align: center;
-    max-width: 500px;
+	margin: 10px auto;
+	text-align: center;
+	max-width: 500px;
 }
+
 #form {
-    padding-bottom: 10px;
+	padding-bottom: 10px;
 }
+
 #form_wrapper {
-    margin-top: 10px;
-    display: block;
-    width: 80vw;
-    margin: auto;
+	margin-top: 10px;
+	display: block;
+	width: 80vw;
+	margin: auto;
 }
+
 .form_container {
-    display: table-caption;
+	display: table-caption;
 }
+
 .input {
-    background-color: white !important;
-    border: 1px solid white !important;
-    border-radius: 0px !important;
-    width: 80vw;
+	background-color: white !important;
+	border: 1px solid white !important;
+	border-radius: 0px !important;
+	width: 80vw;
 }
+
 .label {
-    font-size: 15px !important;
-    font-weight: 600;
-    margin: 10px auto 5px auto;
+	font-size: 15px !important;
+	font-weight: 600;
+	margin: 10px auto 5px auto;
 }
+
 #send_knap {
-    border-radius: 25px;
-    border: 1px solid #374031;
-    background-color: rgb(255, 255, 255, 0%);
-    color: #374031;
-    display: block;
-    margin: 0 auto 15px auto;
+	border-radius: 25px;
+	border: 1px solid #374031;
+	background-color: rgb(255, 255, 255, 0%);
+	color: #374031;
+	display: block;
+	margin: 0 auto 15px auto;
 }
+
 #send_knap:hover {
-    background-color: #374031;
-    color: white;
+	background-color: #374031;
+	color: white;
 }
+
 #sendt_besked {
-    position: absolute;
-    left: 10%;
-    bottom: 400px;
-    width: 280px;
-    padding: 10px;
-    border: 1px solid #EB7A6B;
-    background-color: rgb(249, 223, 214, 60%);
-    display: none;
+	position: absolute;
+	left: 10%;
+	bottom: 400px;
+	width: 280px;
+	padding: 10px;
+	border: 1px solid #EB7A6B;
+	background-color: rgb(249, 223, 214, 60%);
+	display: none;
 }
 
 /*------TABLET VERSION------*/
 
 @media only screen and (min-width: 600px) {
-    #snak_intro {
-        display: grid;
-        grid-template-columns: 60% 40%;
-        padding: 20px 15px 0 15px;
-        margin-bottom: 20px;
-    }
-    #question_container {
-        width: 50%;
-        margin: 15px auto 10px 5%;
-    }
-    #svar_container {
-        width: 50%;
-        margin: 10px 5% 10px auto;
-    }
-    #filtrering {
-        display: inherit;
-        overflow-x: auto;
-    }
-    .question_container {
-        width: 50%;
-        margin: 15px auto 10px 5%;
-    }
-    .svar_container {
-        width: 50%;
-        margin: 10px 5% 10px auto;
-    }
-    .shop_indhold {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-    .countdown {
-        margin-top: 160px;
-    }
-    #filtrering_knap {
-        display: inherit;
-        overflow-x: auto;
-    }
-    .shop_filtrering {
-        padding-left: 7%;
-    }
+	#snak_intro {
+		display: grid;
+		grid-template-columns: 60% 40%;
+		padding: 20px 15px 0 15px;
+		margin-bottom: 20px;
+	}
+
+	#question_container {
+		width: 50%;
+		margin: 15px auto 10px 5%;
+	}
+
+	#svar_container {
+		width: 50%;
+		margin: 10px 5% 10px auto;
+	}
+
+	#filtrering {
+		display: inherit;
+		overflow-x: auto;
+	}
+
+	.question_container {
+		width: 50%;
+		margin: 15px auto 10px 5%;
+	}
+
+	.svar_container {
+		width: 50%;
+		margin: 10px 5% 10px auto;
+	}
+
+	.shop_indhold {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+
+	.countdown {
+		margin-top: 160px;
+	}
+
+	#filtrering_knap {
+		display: inherit;
+		overflow-x: auto;
+	}
+
+	.shop_filtrering {
+		padding-left: 7%;
+	}
 }
 
 /*---------DESKTOP VERSION----------*/
 
 @media only screen and (min-width: 800px) {
-    #snak_intro_tekst {
-        max-width: 500px;
-        margin: 20px auto;
-    }
-    #snak_img {
-        width: 50%;
-        padding-bottom: 5px;
-    }
-    #sporgsmaal_container {
-        margin-left: 10%;
-    }
-    #sporgsmaal .snak_h2 {
-        margin-left: 12%;
-    }
-    #filtrering {
-        margin-left: 10%;
-    }
-    #question_container {
-        max-width: 40%;
-        margin: 20px auto 20px 15%;
-    }
-    #svar_container {
-        max-width: 40%;
-        margin: 10px 15% 20px auto;
-    }
-    #form_img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    #form_wrapper {
-        max-width: 400px;
-    }
-    #formular_container {
-        display: grid;
-        grid-template-columns: 50% 50%;
-    }
-    #mere:hover {
-        background-color: #EB7A6B;
-    }
-    .question_container {
-        width: 40%;
-        margin: 20px auto 20px 15%;
-    }
-    .svar_container {
-        width: 40%;
-        margin: 10px 15% 20px auto;
-    }
-    .input {
-        width: 380px !important;
-    }
-    .label {
-        font-size: 10px;
-        margin: 10px auto 0 auto;
-    }
-    .shop_indhold {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
+	#snak_intro_tekst {
+		max-width: 500px;
+		margin: 20px auto;
+	}
+
+	#snak_img {
+		width: 50%;
+		padding-bottom: 5px;
+	}
+
+	#sporgsmaal_container {
+		margin-left: 10%;
+	}
+
+	#sporgsmaal .snak_h2 {
+		margin-left: 12%;
+	}
+
+	#filtrering {
+		margin-left: 10%;
+	}
+
+	#question_container {
+		max-width: 40%;
+		margin: 20px auto 20px 15%;
+	}
+
+	#svar_container {
+		max-width: 40%;
+		margin: 10px 15% 20px auto;
+	}
+
+	#form_img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	#form_wrapper {
+		max-width: 400px;
+	}
+
+	#formular_container {
+		display: grid;
+		grid-template-columns: 50% 50%;
+	}
+
+	#mere:hover {
+		background-color: #EB7A6B;
+	}
+
+	.question_container {
+		width: 40%;
+		margin: 20px auto 20px 15%;
+	}
+
+	.svar_container {
+		width: 40%;
+		margin: 10px 15% 20px auto;
+	}
+
+	.input {
+		width: 380px !important;
+	}
+
+	.label {
+		font-size: 10px;
+		margin: 10px auto 0 auto;
+	}
+
+	.shop_indhold {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
 }
 
 /*--------------SINGLE SIDE CSS----------------*/
 
 #single_h1 {
-    margin-bottom: 0px;
-    line-height: 2em;
+	margin-bottom: 0px;
+	line-height: 2em;
 }
+
 #single_h2 {
-    margin: 10px;
+	margin: 10px;
 }
+
 #overskrift_container {
-    display: flex;
-    flex-direction: row;
-    grid-gap: 10px;
-    margin-top: 10px;
+	display: flex;
+	flex-direction: row;
+	grid-gap: 10px;
+	margin-top: 10px;
 }
+
 #billede_container {
-    display: grid;
-    grid-template-columns: 74% 26%;
-    grid-gap: 10px;
-    margin: 10px;
+	display: grid;
+	grid-template-columns: 74% 26%;
+	grid-gap: 10px;
+	margin: 10px;
 }
+
 #beskrivelse {
-    margin: 10px;
+	margin: 10px;
 }
+
 #pris {
-    margin: 10px;
-    font-weight: 600;
+	margin: 10px;
+	font-weight: 600;
 }
+
 #bottom_section {
-    background-color: white;
-    padding-top: 10px;
-    margin-top: 10px;
+	background-color: white;
+	padding-top: 10px;
+	margin-top: 10px;
 }
+
 #forslaaede_container {
-    display: flex;
-    grid-gap: 10px;
-    overflow-x: scroll;
-    margin: 10px;
-    padding-bottom: 20px;
+	display: flex;
+	grid-gap: 10px;
+	overflow-x: scroll;
+	margin: 10px;
+	padding-bottom: 20px;
 }
+
 #tilbage {
-    margin: 22px 0;
-    margin-left: 10px;
+	margin: 22px 0;
+	margin-left: 10px;
 }
+
 .forslaa_billede {
-    width: 40%;
+	width: 40%;
 }
+
 .button_single {
-    border-radius: 25px;
-    border: 1px solid #374031;
-    background-color: rgb(255, 255, 255, 0%);
-    color: #374031;
-    margin: 5px;
+	border-radius: 25px;
+	border: 1px solid #374031;
+	background-color: rgb(255, 255, 255, 0%);
+	color: #374031;
+	margin: 5px;
 }
+
 .button_single:hover {
-    background-color: #374031;
-    color: white;
+	background-color: #374031;
+	color: white;
 }
+
 .ekstra_billede {
-    width: 90%;
+	width: 90%;
 }
 
 /*-----DESKTOP VERSION----*/
 
 @media only screen and (min-width: 800px) {
-    #top_section {
-        margin: 0 auto;
-        max-width: 1200px;
-    }
-    #produkt_wrapper {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 10px;
-    }
-    #single_h2 {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 10px;
-    }
-    #beskrivelse {
-        max-width: 450px;
-    }
-    #forslaaede_container {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-gap: 10px;
-        overflow-x: scroll;
-        margin: 10px auto;
-        padding-bottom: 20px;
-        max-width: 1200px;
-        padding: 10px;
-    }
-    .forslaa_billede {
-        width: 100%;
-    }
-    .countdown {
-        font-size: 80px !important;
-    }
+	#top_section {
+		margin: 0 auto;
+		max-width: 1200px;
+	}
+
+	#produkt_wrapper {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 10px;
+	}
+
+	#single_h2 {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 10px;
+	}
+
+	#beskrivelse {
+		max-width: 450px;
+	}
+
+	#forslaaede_container {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-gap: 10px;
+		overflow-x: scroll;
+		margin: 10px auto;
+		padding-bottom: 20px;
+		max-width: 1200px;
+		padding: 10px;
+	}
+
+	.forslaa_billede {
+		width: 100%;
+	}
+
+	.countdown {
+		font-size: 80px !important;
+	}
 }
 
 /*effekter*/
 
 .hide {
-    display: none;
+	display: none;
 }
 
 /*animationer*/
 
 .forsvind {
-    animation-name: forsvind_kf;
-    animation-duration: 5s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+	animation-name: forsvind_kf;
+	animation-duration: 5s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
 }
+
 @keyframes forsvind_kf {
-    0% {
-        opacity: 1;
-    }
-    70% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-        display: none;
-    }
+	0% {
+		opacity: 1;
+	}
+
+	70% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+		display: none;
+	}
 }
