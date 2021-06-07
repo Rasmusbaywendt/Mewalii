@@ -60,7 +60,7 @@ get_header();?>
         <!------FJERDE SEKTION------>
         <section id="formular">
             <h2 class="snak_h2">Har du et spørgsmål</h2>
-            <p id="formular_tekst">Vi vil meget gerne høre fra dig, hvis du har et spørgsmål eller noget du er nyssgerig på</p>
+            <p id="formular_tekst">Vi vil meget gerne høre fra dig, hvis du har et spørgsmål eller noget du er nysgerrig på</p>
             <div id="formular_container">
                 <div>
                     <form id="form" action="">
