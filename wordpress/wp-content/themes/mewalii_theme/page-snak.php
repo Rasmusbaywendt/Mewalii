@@ -39,8 +39,11 @@ get_header();?>
                 <div id="question_container">
                     <p id="uge_question"></p>
                 </div>
-                <div id="svar_container">
-                    <p id="uge_svar"></p>
+                <div class="sygeplejerske_container">
+                    <img id="sygeplejerske" src="<?php echo get_stylesheet_directory_uri()?>/img/Sygeplejerske.png" alt="sygeplejerske">
+                    <div id="svar_container">
+                        <p id="uge_svar"></p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -99,8 +102,11 @@ get_header();?>
                 <div class="question_container">
                     <p id="question"></p>
                 </div>
-                <div class="svar_container">
-                    <p id="svar"></p>
+                <div class="sygeplejerske_container">
+                    <img class="sygeplejerske" src="<?php echo get_stylesheet_directory_uri()?>/img/Sygeplejerske.png" alt="sygeplejerske">
+                    <div class="svar_container">
+                        <p id="svar"></p>
+                    </div>
                 </div>
             </div>
         </template>

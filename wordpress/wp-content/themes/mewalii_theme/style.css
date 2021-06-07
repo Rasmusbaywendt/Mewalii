@@ -237,6 +237,23 @@ input[type="submit"] {
 #uge_svar {
     margin-bottom: 5px;
 }
+#sygeplejerske {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 75%;
+    left: 5vw;
+}
+.sygeplejerske {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 80%;
+    left: 5vw;
+}
+.sygeplejerske_container {
+    position: relative;
+}
 
 /*FILTRERING*/
 
@@ -408,6 +425,12 @@ input[type="submit"] {
     }
     .shop_filtrering {
         padding-left: 7%;
+    }
+    #sygeplejerske {
+        left: 35vw;
+    }
+    .sygeplejerske {
+        left: 35vw;
     }
 }
 
@@ -592,6 +615,12 @@ input[type="submit"] {
     }
     #filtrering {
         display: inherit !important;
+    }
+    #sygeplejerske {
+        left: 40vw;
+    }
+    .sygeplejerske {
+        left: 40vw;
     }
     .filter {
         padding: 0px !important;
