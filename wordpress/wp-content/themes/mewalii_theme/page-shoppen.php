@@ -31,7 +31,9 @@ get_header();
             </div>
         </section>
         <section class="shop_filtrering">
-            <nav id="filtrering_knap"></nav>
+            <nav id="filtrering_knap">
+                <button class="filter valgt" data-categories="alle">Se alle</button>
+            </nav>
         </section>
 
 
@@ -62,6 +64,7 @@ get_header();
             let produkter;
             //Variable, der indeholder json kategorien
             let categories;
+
             //Variable til filter
             let filter = "alle";
 

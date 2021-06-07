@@ -122,7 +122,7 @@ get_header();?>
 
             //opretter konstanter til json data
             const dbUrl = "http://emmasvane.dk/mewalii/mewalli/wp-json/wp/v2/qa?per_page=100";
-            const dbCat = "http://emmasvane.dk/mewalii/mewalli/wp-json/wp/v2/categories";
+            const dbCat = "http://emmasvane.dk/mewalii/mewalli/wp-json/wp/v2/categories?per_page=20";
 
             //lytter til om DOM er loaded og kalder getJson
             document.addEventListener("DOMContentLoaded", getJson);
@@ -153,7 +153,7 @@ get_header();?>
             //opretter knapper
             function opretKnapper() {
 
-                let kategorier_vis = [26, 27, 28, 29, 36];
+                let kategorier_vis = [26, 27, 28, 29, 36, 37];
 
                 //opretter en knap for hver kategori, og tilføjer kategori navnet på knappen
                 kategorier.forEach(cat => {

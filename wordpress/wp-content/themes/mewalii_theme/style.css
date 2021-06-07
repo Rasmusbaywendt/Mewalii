@@ -33,6 +33,7 @@ button {
     width: 121px !important;
     font-size: 15px !important;
     padding: 0px !important;
+    font-family: 'Source Sans Pro', sans-serif !important;
 }
 .neve-main {
     background-color: #FCF2E8;
@@ -244,7 +245,7 @@ input[type="submit"] {
 }
 #filtrering {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     overflow-x: scroll;
 }
 #filtrering button:hover {
@@ -261,7 +262,7 @@ input[type="submit"] {
     border: 2px solid #374031;
     margin-left: 10px;
     text-align: center;
-    padding: 5px;
+    padding: 5px !important;
     color: #374031;
 }
 .valgt {
@@ -307,6 +308,7 @@ input[type="submit"] {
     width: 120px;
     display: block;
     margin: 15px auto 0;
+    font-family: 'Source Sans Pro', sans-serif !important;
 }
 
 /*FORMULAR SEKTION*/
@@ -345,6 +347,7 @@ input[type="submit"] {
     font-size: 15px !important;
     font-weight: 600;
     margin: 10px auto 5px auto;
+    font-family: 'Source Sans Pro', sans-serif !important;
 }
 #send_knap {
     border-radius: 25px;
@@ -368,6 +371,9 @@ input[type="submit"] {
     background-color: rgb(249, 223, 214, 60%);
     display: none;
 }
+#form placeholder {
+    font-family: 'Source Sans Pro', sans-serif !important;
+}
 
 /*------TABLET VERSION------*/
 
@@ -385,10 +391,6 @@ input[type="submit"] {
     #svar_container {
         width: 50%;
         margin: 10px 5% 10px auto;
-    }
-    #filtrering {
-        display: inherit;
-        overflow-x: auto;
     }
     .question_container {
         width: 50%;
@@ -477,6 +479,8 @@ input[type="submit"] {
 #single_h1 {
     margin-bottom: 0px;
     line-height: 2em;
+    font-size: 24px !important;
+    margin-top: 10px;
 }
 #single_h2 {
     margin: 10px;
@@ -532,6 +536,7 @@ input[type="submit"] {
 }
 .ekstra_billede {
     width: 90%;
+    cursor: pointer;
 }
 
 /*-----DESKTOP VERSION----*/
@@ -570,6 +575,9 @@ input[type="submit"] {
     .countdown {
         font-size: 80px !important;
     }
+    #single_h1 {
+        font-size: 35px !important;
+    }
 }
 
 /*-----parent theme desktop version----*/
@@ -581,6 +589,12 @@ input[type="submit"] {
     }
     #filtrering_knap {
         display: inherit !important;
+    }
+    #filtrering {
+        display: inherit !important;
+    }
+    .filter {
+        padding: 0px !important;
     }
 }
 
